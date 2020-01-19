@@ -5,6 +5,8 @@
  */
 package model;
 
+import creacional.Persona;
+
 /**
  *
  * @author lcsan

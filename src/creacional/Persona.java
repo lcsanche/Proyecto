@@ -1,5 +1,14 @@
-package model;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package creacional;
 
+/**
+ *
+ * @author Hp
+ */
 public class Persona {
     protected String Nombre;
     protected String Cedula;
@@ -74,8 +83,4 @@ public class Persona {
     public void setTelTrabajo(String telTrabajo) {
         this.telTrabajo = telTrabajo;
     }
-    
-    
-    
-    
 }
