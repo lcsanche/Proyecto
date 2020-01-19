@@ -5,10 +5,48 @@
  */
 package builder;
 
+import model.Orientacion;
+import model.TipoPatio;
+
 /**
  *
  * @author Karina Ortega - Luis Sánchez - Jocelyn Chicaiza
  */
-public class CasaParaisoBuilder {
+public class CasaParaisoBuilder extends CasaBuilder{
     
+    @Override
+    public void definir_m2() {
+        casa.setM2(90);
+    }
+
+    @Override
+    public void definir_numPisos() { 
+        casa.setNumPisos(2);
+    }
+
+    @Override
+    public void indicar_esEsquinera() {
+        casa.setEsEsquinera(true);
+    }
+
+    @Override
+    public void indicar_orientacion() {
+        casa.setOrientacion(Orientacion.NORTE);
+    }
+
+    @Override
+    public void indicar_tamanioPatio() {
+        casa.setPatio(TipoPatio.PEQUENO);
+    }
+
+    @Override
+    public void definir_numHab() {
+        casa.setNumHabitaciones(3);
+    }
+
+    @Override
+    public void definir_numBanos() {
+        casa.setNumBanos(2);
+    }
+
 }
