@@ -9,6 +9,6 @@ package builder;
  *
  * @author Karina Ortega - Luis Sánchez - Jocelyn Chicaiza
  */
-public class CasaCielo {
+public class CasaParaisoBuilder {
     
 }
