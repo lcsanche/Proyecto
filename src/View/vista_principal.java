@@ -41,7 +41,7 @@ public class vista_principal extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jButton1.setBackground(new java.awt.Color(204, 204, 255));
-        jButton1.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tw Cen MT", 2, 24)); // NOI18N
         jButton1.setText("Ingresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -49,25 +49,30 @@ public class vista_principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(330, 230, 230, 60);
+        jButton1.setBounds(310, 230, 230, 60);
 
         jButton2.setBackground(new java.awt.Color(204, 204, 255));
-        jButton2.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Tw Cen MT", 2, 24)); // NOI18N
         jButton2.setText("Registrarse");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2);
-        jButton2.setBounds(330, 320, 230, 60);
+        jButton2.setBounds(310, 340, 230, 60);
 
         jButton3.setBackground(new java.awt.Color(204, 204, 255));
-        jButton3.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Tw Cen MT", 2, 20)); // NOI18N
         jButton3.setText("Continuar como invitado");
         getContentPane().add(jButton3);
-        jButton3.setBounds(330, 410, 230, 60);
+        jButton3.setBounds(310, 440, 230, 60);
 
         jLabel2.setFont(new java.awt.Font("Verdana", 3, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 0, 102));
         jLabel2.setText("My Home S.A");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(280, 80, 360, 110);
+        jLabel2.setBounds(240, 80, 360, 110);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo_principal.jpeg"))); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(1366, 760));
@@ -80,8 +85,17 @@ public class vista_principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        vista_login vlog= new vista_login();
+        vlog.setVisible(true);
+        dispose();
+        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        vista_registrarse vr=new vista_registrarse();
+        vr.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
