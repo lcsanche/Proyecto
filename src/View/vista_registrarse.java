@@ -42,6 +42,7 @@ public class vista_registrarse extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         jLabel3.setText("jLabel3");
@@ -147,12 +148,17 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(20, 480, 110, 30);
+        jButton1.setBounds(20, 500, 110, 30);
+
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
+        jButton2.setText("Registrarse");
+        getContentPane().add(jButton2);
+        jButton2.setBounds(540, 500, 110, 30);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registro_1.jpg"))); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(-50, -370, 1060, 1100);
-        jLabel2.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -220,6 +226,7 @@ public class vista_registrarse extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
