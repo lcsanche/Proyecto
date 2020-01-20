@@ -61,7 +61,7 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(250, 130, 310, 30);
+        jTextField2.setBounds(320, 140, 310, 30);
 
         jTextField3.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
@@ -70,7 +70,7 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(250, 170, 310, 30);
+        jTextField3.setBounds(320, 180, 310, 30);
 
         jTextField4.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
@@ -79,7 +79,7 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(250, 210, 310, 30);
+        jTextField4.setBounds(320, 220, 310, 30);
 
         jTextField5.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +88,7 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField5);
-        jTextField5.setBounds(250, 250, 310, 30);
+        jTextField5.setBounds(320, 260, 310, 30);
 
         jTextField6.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
@@ -97,7 +97,7 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField6);
-        jTextField6.setBounds(250, 290, 310, 30);
+        jTextField6.setBounds(320, 300, 310, 30);
 
         jPasswordField1.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
@@ -106,37 +106,37 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(250, 330, 310, 30);
+        jPasswordField1.setBounds(320, 340, 310, 30);
 
         jLabel9.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel9.setText("Usuario:");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(130, 290, 100, 40);
+        jLabel9.setBounds(200, 300, 100, 40);
 
         jLabel8.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel8.setText("Correo:");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(130, 250, 100, 40);
+        jLabel8.setBounds(200, 260, 100, 40);
 
         jLabel7.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel7.setText("Cedula:");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(130, 210, 100, 40);
+        jLabel7.setBounds(200, 220, 100, 40);
 
         jLabel6.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel6.setText("Apellidos:");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(130, 150, 110, 70);
+        jLabel6.setBounds(200, 160, 110, 70);
 
         jLabel5.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel5.setText("Contraseña:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(130, 330, 130, 40);
+        jLabel5.setBounds(200, 340, 130, 40);
 
         jLabel4.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel4.setText("Nombres:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(130, 110, 110, 70);
+        jLabel4.setBounds(200, 120, 110, 70);
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
