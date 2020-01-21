@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Conexion;
+package model;
 
 /**
  *
@@ -22,16 +22,16 @@ public class Conexion {
     private final String password = "root";
 
     public Connection ConexionDB() {
-        Connection conexion = null;
+        Connection con = null;
 
         try {
-            conexion = DriverManager.getConnection(url, username, password);
+            con = DriverManager.getConnection(url, username, password);
             System.out.println("La Conexión ha sido Exitosa");
         } catch (SQLException e) {
             System.out.println("No se ha podido realizar la Conexión");
             System.out.println("Error: "+e.getMessage());
         }
-        return conexion;
+        return con;
     }
 
 }
