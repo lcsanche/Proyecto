@@ -68,12 +68,13 @@ public class vista_principal extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(310, 440, 230, 60);
 
-        jLabel2.setFont(new java.awt.Font("Verdana", 3, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 0, 102));
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 3, 60)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(204, 51, 0));
         jLabel2.setText("My Home S.A");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(240, 80, 360, 110);
+        jLabel2.setBounds(470, 20, 400, 150);
 
+        jLabel1.setBackground(new java.awt.Color(153, 153, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo_principal.jpeg"))); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(1366, 760));
         jLabel1.setMinimumSize(new java.awt.Dimension(1366, 760));
