@@ -5,7 +5,7 @@
  */
 package View;
 
-import Conexion.Conexion;
+import Conexion.conexion;
 
 /**
  *
@@ -50,6 +50,7 @@ public class vista_registrarse extends javax.swing.JFrame {
         jLabel3.setText("jLabel3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(400, 150));
         setMaximumSize(new java.awt.Dimension(900, 580));
         setMinimumSize(new java.awt.Dimension(900, 580));
         setPreferredSize(new java.awt.Dimension(900, 580));
@@ -138,7 +139,7 @@ public class vista_registrarse extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel4.setText("Nombres:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(200, 120, 110, 70);
+        jLabel4.setBounds(200, 130, 110, 60);
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
@@ -152,6 +153,11 @@ public class vista_registrarse extends javax.swing.JFrame {
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 atras(evt);
+            }
+        });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
@@ -206,10 +212,14 @@ public class vista_registrarse extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Conexion conexion = new Conexion();
+        conexion conexion = new conexion();
         conexion.ConexionDB();
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

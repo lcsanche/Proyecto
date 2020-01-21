@@ -34,6 +34,7 @@ public class vista_principal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(400, 150));
         setMaximumSize(new java.awt.Dimension(900, 580));
         setMinimumSize(new java.awt.Dimension(900, 580));
         setPreferredSize(new java.awt.Dimension(900, 580));
@@ -72,7 +73,7 @@ public class vista_principal extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(204, 51, 0));
         jLabel2.setText("My Home S.A");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(470, 20, 400, 150);
+        jLabel2.setBounds(480, 30, 400, 150);
 
         jLabel1.setBackground(new java.awt.Color(153, 153, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo_principal.jpeg"))); // NOI18N
@@ -80,7 +81,7 @@ public class vista_principal extends javax.swing.JFrame {
         jLabel1.setMinimumSize(new java.awt.Dimension(1366, 760));
         jLabel1.setPreferredSize(new java.awt.Dimension(1366, 760));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(-10, -110, 920, 780);
+        jLabel1.setBounds(0, -110, 900, 780);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

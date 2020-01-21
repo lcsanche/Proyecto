@@ -5,7 +5,7 @@
  */
 package View;
 
-import Conexion.Conexion;
+import Conexion.conexion;
 
 /**
  *
@@ -39,6 +39,7 @@ public class vista_login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(400, 150));
         setMaximumSize(new java.awt.Dimension(900, 580));
         setMinimumSize(new java.awt.Dimension(900, 580));
         setPreferredSize(new java.awt.Dimension(900, 580));
@@ -131,8 +132,9 @@ public class vista_login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Conexion conexion = new Conexion();
+        conexion conexion = new conexion();
         conexion.ConexionDB();
+         
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
