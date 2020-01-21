@@ -29,7 +29,8 @@ public class vista_login extends javax.swing.JFrame {
 
         jTextField1 = new javax.swing.JTextField();
         jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -60,21 +61,32 @@ public class vista_login extends javax.swing.JFrame {
         getContentPane().add(jPasswordField1);
         jPasswordField1.setBounds(360, 360, 210, 40);
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
-        jButton1.setText("Atras");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
+        jButton2.setText("Atras");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                atras(evt);
+                jButton2atras(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(40, 460, 100, 40);
+        getContentPane().add(jButton2);
+        jButton2.setBounds(40, 460, 100, 40);
+
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
+        jButton3.setText("Ingresar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3);
+        jButton3.setBounds(690, 460, 100, 40);
 
         jLabel4.setFont(new java.awt.Font("Tw Cen MT", 2, 36)); // NOI18N
         jLabel4.setText("Usuario:");
@@ -106,15 +118,19 @@ public class vista_login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void atras(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atras
-         vista_principal vp=new vista_principal();
+    private void jButton2atras(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2atras
+        vista_principal vp = new vista_principal();
         vp.setVisible(true);
         dispose();
-    }//GEN-LAST:event_atras
+    }//GEN-LAST:event_jButton2atras
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -152,7 +168,8 @@ public class vista_login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

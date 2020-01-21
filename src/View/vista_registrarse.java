@@ -42,6 +42,7 @@ public class vista_registrarse extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         jLabel3.setText("jLabel3");
@@ -60,7 +61,7 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(230, 120, 310, 40);
+        jTextField2.setBounds(320, 140, 310, 30);
 
         jTextField3.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
@@ -69,7 +70,7 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(230, 180, 310, 40);
+        jTextField3.setBounds(320, 180, 310, 30);
 
         jTextField4.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
@@ -78,7 +79,7 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(230, 240, 310, 40);
+        jTextField4.setBounds(320, 220, 310, 30);
 
         jTextField5.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
@@ -87,7 +88,7 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField5);
-        jTextField5.setBounds(230, 300, 310, 40);
+        jTextField5.setBounds(320, 260, 310, 30);
 
         jTextField6.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
@@ -96,41 +97,46 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField6);
-        jTextField6.setBounds(230, 360, 310, 40);
+        jTextField6.setBounds(320, 300, 310, 30);
 
         jPasswordField1.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(230, 420, 310, 40);
+        jPasswordField1.setBounds(320, 340, 310, 30);
 
         jLabel9.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel9.setText("Usuario:");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(110, 360, 100, 40);
+        jLabel9.setBounds(200, 300, 100, 40);
 
         jLabel8.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel8.setText("Correo:");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(110, 300, 100, 40);
+        jLabel8.setBounds(200, 260, 100, 40);
 
         jLabel7.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel7.setText("Cedula:");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(110, 240, 100, 40);
+        jLabel7.setBounds(200, 220, 100, 40);
 
         jLabel6.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel6.setText("Apellidos:");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(110, 160, 110, 70);
+        jLabel6.setBounds(200, 160, 110, 70);
 
         jLabel5.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel5.setText("Contraseña:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(110, 420, 130, 40);
+        jLabel5.setBounds(200, 340, 130, 40);
 
         jLabel4.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel4.setText("Nombres:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(110, 110, 110, 70);
+        jLabel4.setBounds(200, 120, 110, 70);
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
@@ -147,12 +153,22 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(20, 480, 110, 30);
+        jButton1.setBounds(90, 470, 120, 40);
+
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
+        jButton2.setText("Registrarse");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(680, 470, 120, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registro_1.jpg"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(-50, -370, 1060, 1100);
-        jLabel2.getAccessibleContext().setAccessibleName("");
+        jLabel2.setBounds(-50, -360, 1060, 1100);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -182,6 +198,14 @@ public class vista_registrarse extends javax.swing.JFrame {
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -220,6 +244,7 @@ public class vista_registrarse extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
