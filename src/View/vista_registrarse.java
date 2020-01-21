@@ -5,6 +5,8 @@
  */
 package View;
 
+import Conexion.Conexion;
+
 /**
  *
  * @author PC-4
@@ -204,7 +206,9 @@ public class vista_registrarse extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        Conexion conexion = new Conexion();
+        conexion.ConexionDB();
+// TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
