@@ -5,6 +5,8 @@
  */
 package View;
 
+import model.Conexion;
+
 /**
  *
  * @author PC-4
@@ -129,6 +131,8 @@ public class vista_principal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                Conexion conexion = new Conexion();
+                conexion.ConexionDB();
                 new vista_principal().setVisible(true);
             }
         });

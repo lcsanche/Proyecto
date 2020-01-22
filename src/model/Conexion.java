@@ -15,8 +15,8 @@ import java.sql.SQLException;
 
 public class Conexion {
     private final String database = "MyHomeDB";
-    private final String hostname = "127.0.0.1";
-    private final String port = "3306";
+    private final String hostname = "192.168.99.100";
+    private final String port = "33061";
     private final String url = "jdbc:mysql://" + hostname + ":" + port + "/" + database;
     private final String username = "root";
     private final String password = "root";
