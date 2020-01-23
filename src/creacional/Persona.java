@@ -10,22 +10,37 @@ package creacional;
  * @author Hp
  */
 public class Persona {
+    protected String user;
+    protected String password;
     protected String Nombre;
     protected String Cedula;
-    protected String nCelular;
     protected String Email;
-    protected String dirDomicilio;
-    protected String estCivil;
-    protected String telTrabajo;
+    protected String nCelular;
+    
 
     public Persona() {
+        this.user = user;
+        this.password = password;
         this.Nombre = Nombre;
         this.Cedula = Cedula;
         this.nCelular = nCelular;
         this.Email = Email;
-        this.dirDomicilio = dirDomicilio;
-        this.estCivil = estCivil;
-        this.telTrabajo = telTrabajo;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getNombre() {
@@ -44,14 +59,6 @@ public class Persona {
         this.Cedula = Cedula;
     }
 
-    public String getnCelular() {
-        return nCelular;
-    }
-
-    public void setnCelular(String nCelular) {
-        this.nCelular = nCelular;
-    }
-
     public String getEmail() {
         return Email;
     }
@@ -60,27 +67,13 @@ public class Persona {
         this.Email = Email;
     }
 
-    public String getDirDomicilio() {
-        return dirDomicilio;
+    public String getnCelular() {
+        return nCelular;
     }
 
-    public void setDirDomicilio(String dirDomicilio) {
-        this.dirDomicilio = dirDomicilio;
+    public void setnCelular(String nCelular) {
+        this.nCelular = nCelular;
     }
 
-    public String getEstCivil() {
-        return estCivil;
-    }
-
-    public void setEstCivil(String estCivil) {
-        this.estCivil = estCivil;
-    }
-
-    public String getTelTrabajo() {
-        return telTrabajo;
-    }
-
-    public void setTelTrabajo(String telTrabajo) {
-        this.telTrabajo = telTrabajo;
-    }
+    
 }
