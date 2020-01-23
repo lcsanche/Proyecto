@@ -1,6 +1,6 @@
 package model;
 
-public class Vendedor extends Empleado{
+public class Vendedor{
     
     public void DiseñarCasa(){
         //Definir el Metodo

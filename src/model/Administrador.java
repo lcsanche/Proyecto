@@ -9,7 +9,7 @@ package model;
  *
  * @author lcsan
  */
-public class Administrador extends Empleado{
+public class Administrador{
     
     public void AgregarEmpleado(){
         //Definir el Metodo
