@@ -42,5 +42,22 @@ public class Conexion {
         }
         return resultado;
     }
+    
+    public boolean Actualizar(String SQL1,String SQL2) {
+        try {
+            ResultSet resultado = consultar(SQL1);
+            resultado.last();
+            if (resultado.getRow() > 0){
+                return false;
+            }else{
+                Statement sentencia = DriverManager.getConnection(url, username, password).createStatement();
+                sentencia.executeUpdate(SQL2);
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 
 }

@@ -4,6 +4,11 @@
  * and open the template in the editor.
  */
 package View;
+
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+import model.Conexion;
+
 /**
  *
  * @author PC-4
@@ -209,7 +214,29 @@ public class vista_registrarse extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        String nombre = jTextField2.getText();
+        String apellido = jTextField3.getText();
+        String cedula =  jTextField4.getText();
+        String correo = jTextField5.getText();
+        String user = jTextField6.getText();
+        String password = new String(jPasswordField1.getPassword());
+        if (nombre.length() > 0 && apellido.length() > 0 && cedula.length() > 0 && correo.length() > 0 &&user.length() > 0 && password.length() > 0 ){
+            if(RegistrarCliente(nombre,apellido,Integer. parseInt(cedula),correo,user,password)){
+                JOptionPane.showMessageDialog(null, "Registro Exitoso");
+                vista_login vlog= new vista_login();
+                vlog.setVisible(true);
+        dispose();
+            }else{
+                JOptionPane.showMessageDialog(null, "El Usuario ya se encuentra registrado");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Los Campos son Obligatorios");
+        } 
+
+
+
+
+// TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -270,4 +297,18 @@ public class vista_registrarse extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
+
+    public boolean RegistrarCliente(String nombre,String apellido,int cedula,String correo,String user, String password){
+        Conexion conexion = new Conexion();
+        try{
+            String SQL1 = "SELECT * FROM Cliente WHERE IdCliente = '"+user+"'";
+            String SQL2 = "INSERT INTO Cliente(IdCliente,Contraseña,Nombre,Apellido,Cedula,Correo) VALUES ('"+user+"','"+password+"','"+nombre+"','"+apellido+"',"+cedula+",'"+correo+"')";
+            if(conexion.Actualizar(SQL1, SQL2)){
+                return true;
+            }else{return false;}
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }
