@@ -37,7 +37,7 @@ public class vista_login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocation(new java.awt.Point(400, 150));
+        setLocation(new java.awt.Point(300, 100));
         setMaximumSize(new java.awt.Dimension(900, 580));
         setMinimumSize(new java.awt.Dimension(900, 580));
         setPreferredSize(new java.awt.Dimension(900, 580));
@@ -130,7 +130,9 @@ public class vista_login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        vista_diseno_casa dc = new vista_diseno_casa();
+        dc.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

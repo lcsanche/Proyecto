@@ -36,9 +36,10 @@ public class vista_principal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocation(new java.awt.Point(400, 150));
+        setLocation(new java.awt.Point(300, 100));
         setMaximumSize(new java.awt.Dimension(900, 580));
         setMinimumSize(new java.awt.Dimension(900, 580));
+        setName("principal"); // NOI18N
         setPreferredSize(new java.awt.Dimension(900, 580));
         setResizable(false);
         getContentPane().setLayout(null);
@@ -68,6 +69,11 @@ public class vista_principal extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(204, 204, 255));
         jButton3.setFont(new java.awt.Font("Tw Cen MT", 2, 20)); // NOI18N
         jButton3.setText("Continuar como invitado");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3);
         jButton3.setBounds(310, 440, 230, 60);
 
@@ -100,6 +106,12 @@ public class vista_principal extends javax.swing.JFrame {
         vr.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       vista_diseno_casa dc = new vista_diseno_casa();
+        dc.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
