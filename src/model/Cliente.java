@@ -5,15 +5,10 @@
  */
 package model;
 
-import creacional.Usuario;
-
 /**
  *
  * @author lcsan
  */
-public class Cliente extends Usuario {
-    
-    public Cliente() {
-        super();
-    }    
+public class Cliente {
+
 }

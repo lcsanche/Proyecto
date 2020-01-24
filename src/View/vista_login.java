@@ -5,6 +5,10 @@
  */
 package View;
 
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+import model.Conexion;
+
 /**
  *
  * @author PC-4
@@ -130,7 +134,13 @@ public class vista_login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        String user = jTextField1.getText();
+        String password = new String(jPasswordField1.getPassword());
+        if (user.length() > 0 && password.length() > 0 ){
+            validarLogin(user, password);
+        }else{
+            JOptionPane.showMessageDialog(null, "Los Campos son Obligatorios");
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
@@ -178,4 +188,46 @@ public class vista_login extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+    public void validarLogin(String user, String password){
+        if(LoginCliente(user, password)){
+            JOptionPane.showMessageDialog(null, "Inicio de Sesion Exitoso");
+            //agregar vista del usuario
+        }else if(LoginEmpleado(user, password)== "Admin"){
+            JOptionPane.showMessageDialog(null, "Inicio de Sesion Exitoso");
+            //Agregar vista del admin
+        }else if (LoginEmpleado(user, password)== "Vendedor"){
+            //agregar vista del vendedor
+        }else{
+            JOptionPane.showMessageDialog(null, "El nombre de usuario y/o contrasenia no son validos.");
+        }    
+    }
+
+    public boolean LoginCliente(String user, String password){
+        Conexion conexion = new Conexion();
+        try{
+            ResultSet resultado = conexion.consultar("SELECT IdCliente FROM Cliente WHERE IdCliente = '" + user + "' and Contraseña = '" + password + "'" );
+            resultado.last();
+            if (resultado.getRow() > 0){
+                return true;
+            }
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+    
+    public String LoginEmpleado(String user, String password){
+        Conexion conexion = new Conexion();
+        try{
+            ResultSet resultado = conexion.consultar("SELECT Cargo FROM Empleados WHERE IdEmpleado = '" + user + "' and Contraseña = '" + password + "'" );
+            resultado.last();
+            if (resultado.getRow() > 0){
+                return resultado.getString("Cargo");
+            }   
+        }catch (Exception e) {
+            e.printStackTrace();
+        } 
+        return null;
+    }
 }

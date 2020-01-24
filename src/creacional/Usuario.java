@@ -10,16 +10,12 @@ package creacional;
  * @author lcsan
  */
 public class Usuario {
-    protected String user;
-    protected String password;
-    protected String TipoUsuario;
+    private String user;
     
-
     public Usuario() {
         this.user = user;
-        this.password = password;
     }
-
+    
     public String getUser() {
         return user;
     }
@@ -27,13 +23,5 @@ public class Usuario {
     public void setUser(String user) {
         this.user = user;
     }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
+    
 }

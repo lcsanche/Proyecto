@@ -9,9 +9,7 @@ package model;
  *
  * @author lcsan
  */
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class Conexion {
     private final String database = "MyHomeDB";
@@ -23,7 +21,6 @@ public class Conexion {
 
     public Connection ConexionDB() {
         Connection con = null;
-
         try {
             con = DriverManager.getConnection(url, username, password);
             System.out.println("La Conexión ha sido Exitosa");
@@ -32,6 +29,18 @@ public class Conexion {
             System.out.println("Error: "+e.getMessage());
         }
         return con;
+    }
+    
+    public ResultSet consultar(String sql) {
+        ResultSet resultado;
+        try {
+            Statement sentencia = DriverManager.getConnection(url, username, password).createStatement();
+            resultado = sentencia.executeQuery(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return resultado;
     }
 
 }
