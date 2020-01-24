@@ -8,8 +8,7 @@ public class vista_diseno_casa extends javax.swing.JFrame {
     public vista_diseno_casa() {
         initComponents();
     }
-
-   
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -32,6 +31,7 @@ public class vista_diseno_casa extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -176,12 +176,15 @@ public class vista_diseno_casa extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Tw Cen MT", 0, 12)); // NOI18N
         getContentPane().add(jLabel9);
         jLabel9.setBounds(700, 270, 60, 30);
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(70, 100, 2, 2);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -300,5 +303,6 @@ public class vista_diseno_casa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
