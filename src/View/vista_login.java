@@ -41,7 +41,7 @@ public class vista_login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocation(new java.awt.Point(400, 150));
+        setLocation(new java.awt.Point(300, 100));
         setMaximumSize(new java.awt.Dimension(900, 580));
         setMinimumSize(new java.awt.Dimension(900, 580));
         setPreferredSize(new java.awt.Dimension(900, 580));
@@ -140,7 +140,7 @@ public class vista_login extends javax.swing.JFrame {
             validarLogin(user, password);
         }else{
             JOptionPane.showMessageDialog(null, "Los Campos son Obligatorios");
-        }
+        }        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
@@ -192,6 +192,9 @@ public class vista_login extends javax.swing.JFrame {
     public void validarLogin(String user, String password){
         if(LoginCliente(user, password)){
             JOptionPane.showMessageDialog(null, "Inicio de Sesion Exitoso");
+            vista_diseno_casa dc = new vista_diseno_casa();
+            dc.setVisible(true);
+            dispose();
             //agregar vista del usuario
         }else if(LoginEmpleado(user, password)== "Admin"){
             JOptionPane.showMessageDialog(null, "Inicio de Sesion Exitoso");
