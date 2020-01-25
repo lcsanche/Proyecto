@@ -5,9 +5,6 @@
  */
 package builder;
 
-import model.Orientacion;
-import model.TipoPatio;
-
 /**
  *
  * @author Karina Ortega - Luis Sánchez - Jocelyn Chicaiza
@@ -31,12 +28,12 @@ public class CasaOasisBuilder extends CasaBuilder{
 
     @Override
     public void indicar_orientacion() {
-        casa.setOrientacion(Orientacion.SUR);
+        casa.setOrientacion("Sur");
     }
 
     @Override
     public void indicar_tamanioPatio() {
-        casa.setPatio(TipoPatio.GRANDE);
+        casa.setPatio("Grande");
     }
 
     @Override

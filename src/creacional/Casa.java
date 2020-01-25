@@ -5,25 +5,22 @@
  */
 package creacional;
 
-import model.Orientacion;
-import model.TipoPatio;
-
 /**
  *
  * @author Karina Ortega - Luis Sánchez - Jocelyn Chicaiza
  */
 public class Casa {
-     public float m2;
+     public int m2;
      public int numPisos;
      public boolean esEsquinera;
-     public Orientacion orientacion;
-     public TipoPatio patio;
+     public String orientacion;
+     public String patio;
      public int numHabitaciones;
      public int numBanos;
      
      public Casa(){}
 
-    public Casa(float m2, int numPisos, boolean esEsquinera, Orientacion orientacion, TipoPatio patio, int numHabitaciones, int numBanos) {
+    public Casa(int m2, int numPisos, boolean esEsquinera, String orientacion, String patio, int numHabitaciones, int numBanos) {
         this.m2 = m2;
         this.numPisos = numPisos;
         this.esEsquinera = esEsquinera;
@@ -33,7 +30,7 @@ public class Casa {
         this.numBanos = numBanos;
     }
 
-    public float getM2() {
+    public int getM2() {
         return m2;
     }
 
@@ -45,11 +42,11 @@ public class Casa {
         return esEsquinera;
     }
 
-    public Orientacion getOrientacion() {
+    public String getOrientacion() {
         return orientacion;
     }
 
-    public TipoPatio getPatio() {
+    public String getPatio() {
         return patio;
     }
 
@@ -61,7 +58,7 @@ public class Casa {
         return numBanos;
     }
 
-    public void setM2(float m2) {
+    public void setM2(int m2) {
         this.m2 = m2;
     }
 
@@ -73,11 +70,11 @@ public class Casa {
         this.esEsquinera = esEsquinera;
     }
 
-    public void setOrientacion(Orientacion orientacion) {
+    public void setOrientacion(String orientacion) {
         this.orientacion = orientacion;
     }
 
-    public void setPatio(TipoPatio patio) {
+    public void setPatio(String patio) {
         this.patio = patio;
     }
 
