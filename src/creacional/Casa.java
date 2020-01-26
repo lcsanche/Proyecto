@@ -5,6 +5,8 @@
  */
 package creacional;
 
+import model.Conexion;
+
 /**
  *
  * @author Karina Ortega - Luis Sánchez - Jocelyn Chicaiza
@@ -29,7 +31,7 @@ public class Casa {
         this.numHabitaciones = numHabitaciones;
         this.numBanos = numBanos;
     }
-
+    
     public int getM2() {
         return m2;
     }

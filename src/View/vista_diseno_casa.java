@@ -1,7 +1,6 @@
 
 package View;
 
-
 public class vista_diseno_casa extends javax.swing.JFrame {
 
     
@@ -306,3 +305,4 @@ public class vista_diseno_casa extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
+
