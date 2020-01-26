@@ -39,15 +39,15 @@ public class vista_casa_paraiso extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casa paraiso.jpg"))); // NOI18N
+        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casa paraiso.png"))); // NOI18N
         getContentPane().add(Imagen);
-        Imagen.setBounds(80, 80, 290, 260);
+        Imagen.setBounds(80, 50, 290, 260);
 
         TipoCasa.setFont(new java.awt.Font("Tw Cen MT", 2, 36)); // NOI18N
         TipoCasa.setForeground(new java.awt.Color(255, 0, 51));
         TipoCasa.setText("Casa Paraiso");
         getContentPane().add(TipoCasa);
-        TipoCasa.setBounds(130, 40, 230, 50);
+        TipoCasa.setBounds(120, 20, 230, 50);
 
         bAtras.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
         bAtras.setText("Guardar");

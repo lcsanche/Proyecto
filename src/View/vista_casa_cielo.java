@@ -5,6 +5,8 @@
  */
 package View;
 
+import View.vista_diseno_casa;
+
 /**
  *
  * @author PC-4
@@ -39,35 +41,35 @@ public class vista_casa_cielo extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casa paraiso.jpg"))); // NOI18N
+        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casa cielo.png"))); // NOI18N
         getContentPane().add(Imagen);
-        Imagen.setBounds(80, 80, 290, 260);
+        Imagen.setBounds(70, 50, 290, 260);
 
         TipoCasa.setFont(new java.awt.Font("Tw Cen MT", 2, 36)); // NOI18N
         TipoCasa.setForeground(new java.awt.Color(255, 0, 51));
-        TipoCasa.setText("Casa Paraiso");
+        TipoCasa.setText("Casa Cielo");
         getContentPane().add(TipoCasa);
-        TipoCasa.setBounds(100, 30, 250, 50);
+        TipoCasa.setBounds(100, 20, 250, 50);
 
         bAtras.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
-        bAtras.setText("Guardar");
+        bAtras.setText("Atras");
         bAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bAtrasActionPerformed(evt);
             }
         });
         getContentPane().add(bAtras);
-        bAtras.setBounds(710, 450, 100, 30);
+        bAtras.setBounds(60, 470, 100, 30);
 
         bAtras1.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
-        bAtras1.setText("Atras");
+        bAtras1.setText("Guardar");
         bAtras1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bAtras1ActionPerformed(evt);
             }
         });
         getContentPane().add(bAtras1);
-        bAtras1.setBounds(60, 450, 100, 30);
+        bAtras1.setBounds(690, 470, 100, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

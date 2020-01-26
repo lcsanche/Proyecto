@@ -41,7 +41,7 @@ public class vista_casa_oasis extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casa oasis_1.jpg"))); // NOI18N
+        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casa oasis.png"))); // NOI18N
         getContentPane().add(Imagen);
         Imagen.setBounds(80, 80, 290, 260);
 

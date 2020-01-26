@@ -39,10 +39,9 @@ public class vista_diseno_casa extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(900, 580));
         getContentPane().setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casa cielo.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casa cielo.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(600, 60, 260, 210);
+        jLabel1.setBounds(600, 60, 290, 210);
 
         jLabel2.setFont(new java.awt.Font("Tw Cen MT", 2, 24)); // NOI18N
         jLabel2.setText("Casa Paraiso ");
@@ -69,13 +68,13 @@ public class vista_diseno_casa extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(650, 300, 160, 60);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casa paraiso.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casa paraiso.png"))); // NOI18N
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(310, 60, 260, 210);
+        jLabel3.setBounds(300, 60, 290, 210);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casa oasis_1.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casa oasis.png"))); // NOI18N
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(20, 60, 260, 210);
+        jLabel4.setBounds(10, 60, 283, 210);
 
         jLabel5.setFont(new java.awt.Font("Tw Cen MT", 2, 24)); // NOI18N
         jLabel5.setText("Casa Cielo ");
