@@ -30,7 +30,7 @@ public class vista_casa_paraiso extends javax.swing.JFrame {
         Imagen = new javax.swing.JLabel();
         TipoCasa = new javax.swing.JLabel();
         bAtras = new javax.swing.JButton();
-        bAtras1 = new javax.swing.JButton();
+        bGuardar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -50,24 +50,24 @@ public class vista_casa_paraiso extends javax.swing.JFrame {
         TipoCasa.setBounds(120, 20, 230, 50);
 
         bAtras.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
-        bAtras.setText("Guardar");
+        bAtras.setText("Atras");
         bAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bAtrasActionPerformed(evt);
             }
         });
         getContentPane().add(bAtras);
-        bAtras.setBounds(720, 450, 90, 30);
+        bAtras.setBounds(80, 460, 90, 30);
 
-        bAtras1.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
-        bAtras1.setText("Atras");
-        bAtras1.addActionListener(new java.awt.event.ActionListener() {
+        bGuardar.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
+        bGuardar.setText("Guardar");
+        bGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bAtras1ActionPerformed(evt);
+                bGuardarActionPerformed(evt);
             }
         });
-        getContentPane().add(bAtras1);
-        bAtras1.setBounds(60, 450, 90, 30);
+        getContentPane().add(bGuardar);
+        bGuardar.setBounds(680, 460, 90, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -78,9 +78,9 @@ public class vista_casa_paraiso extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_bAtrasActionPerformed
 
-    private void bAtras1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAtras1ActionPerformed
+    private void bGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bAtras1ActionPerformed
+    }//GEN-LAST:event_bGuardarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -122,6 +122,6 @@ public class vista_casa_paraiso extends javax.swing.JFrame {
     private javax.swing.JLabel Imagen;
     private javax.swing.JLabel TipoCasa;
     private javax.swing.JButton bAtras;
-    private javax.swing.JButton bAtras1;
+    private javax.swing.JButton bGuardar;
     // End of variables declaration//GEN-END:variables
 }

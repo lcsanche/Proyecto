@@ -52,24 +52,24 @@ public class vista_casa_oasis extends javax.swing.JFrame {
         TipoCasa.setBounds(130, 40, 180, 50);
 
         bAtras.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
-        bAtras.setText("Guardar");
+        bAtras.setText("Atras");
         bAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bAtrasActionPerformed(evt);
             }
         });
         getContentPane().add(bAtras);
-        bAtras.setBounds(750, 450, 90, 30);
+        bAtras.setBounds(70, 450, 90, 30);
 
         bAtras1.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
-        bAtras1.setText("Atras");
+        bAtras1.setText("Guardar");
         bAtras1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bAtras1ActionPerformed(evt);
             }
         });
         getContentPane().add(bAtras1);
-        bAtras1.setBounds(60, 450, 90, 30);
+        bAtras1.setBounds(750, 450, 90, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
