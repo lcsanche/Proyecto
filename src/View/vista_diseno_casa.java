@@ -22,11 +22,11 @@ public class vista_diseno_casa extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        BDiseñarCielo = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        BDiseñarOasis = new javax.swing.JButton();
+        BDiseñarParaiso = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -37,7 +37,6 @@ public class vista_diseno_casa extends javax.swing.JFrame {
         setLocation(new java.awt.Point(300, 100));
         setMaximumSize(new java.awt.Dimension(900, 580));
         setMinimumSize(new java.awt.Dimension(900, 580));
-        setPreferredSize(new java.awt.Dimension(900, 580));
         getContentPane().setLayout(null);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casa cielo.jpg"))); // NOI18N
@@ -113,15 +112,15 @@ public class vista_diseno_casa extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(360, 300, 160, 60);
 
-        jButton5.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
-        jButton5.setText("Diseñar");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        BDiseñarCielo.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
+        BDiseñarCielo.setText("Diseñar");
+        BDiseñarCielo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                BDiseñarCieloActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5);
-        jButton5.setBounds(650, 460, 160, 60);
+        getContentPane().add(BDiseñarCielo);
+        BDiseñarCielo.setBounds(650, 460, 160, 60);
 
         jButton6.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
         jButton6.setText("Ver caracteristicas ");
@@ -143,25 +142,25 @@ public class vista_diseno_casa extends javax.swing.JFrame {
         getContentPane().add(jButton7);
         jButton7.setBounds(70, 380, 160, 60);
 
-        jButton8.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
-        jButton8.setText("Diseñar");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        BDiseñarOasis.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
+        BDiseñarOasis.setText("Diseñar");
+        BDiseñarOasis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                BDiseñarOasisActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton8);
-        jButton8.setBounds(70, 460, 160, 60);
+        getContentPane().add(BDiseñarOasis);
+        BDiseñarOasis.setBounds(70, 460, 160, 60);
 
-        jButton9.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
-        jButton9.setText("Diseñar");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        BDiseñarParaiso.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
+        BDiseñarParaiso.setText("Diseñar");
+        BDiseñarParaiso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                BDiseñarParaisoActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton9);
-        jButton9.setBounds(360, 460, 160, 60);
+        getContentPane().add(BDiseñarParaiso);
+        BDiseñarParaiso.setBounds(360, 460, 160, 60);
 
         jLabel7.setFont(new java.awt.Font("Tw Cen MT", 0, 12)); // NOI18N
         getContentPane().add(jLabel7);
@@ -186,9 +185,11 @@ public class vista_diseno_casa extends javax.swing.JFrame {
         // TODO add your handling code here
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void BDiseñarCieloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BDiseñarCieloActionPerformed
+        vista_casa_cielo cCielo= new vista_casa_cielo();
+       cCielo.setVisible(true);
+       dispose();
+    }//GEN-LAST:event_BDiseñarCieloActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         
@@ -198,13 +199,17 @@ public class vista_diseno_casa extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    private void BDiseñarOasisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BDiseñarOasisActionPerformed
+       vista_casa_oasis cOasis= new vista_casa_oasis();
+       cOasis.setVisible(true);
+       dispose();
+    }//GEN-LAST:event_BDiseñarOasisActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    private void BDiseñarParaisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BDiseñarParaisoActionPerformed
+        vista_casa_paraiso cparaiso= new vista_casa_paraiso();
+       cparaiso.setVisible(true);
+       dispose();
+    }//GEN-LAST:event_BDiseñarParaisoActionPerformed
 
     private void jButton3ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jButton3ItemStateChanged
       
@@ -284,15 +289,15 @@ public class vista_diseno_casa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BDiseñarCielo;
+    private javax.swing.JButton BDiseñarOasis;
+    private javax.swing.JButton BDiseñarParaiso;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

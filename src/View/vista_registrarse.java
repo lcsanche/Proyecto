@@ -32,11 +32,17 @@ public class vista_registrarse extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
+        tfApellido = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
+        tfNombre = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        cargo = new javax.swing.JTextField();
+        estadoCivil = new javax.swing.JTextField();
+        jTextField10 = new javax.swing.JTextField();
         jPasswordField1 = new javax.swing.JPasswordField();
         jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -45,37 +51,41 @@ public class vista_registrarse extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        tefTrabajo = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
 
         jLabel3.setText("jLabel3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(300, 100));
-        setMaximumSize(new java.awt.Dimension(900, 580));
         setMinimumSize(new java.awt.Dimension(900, 580));
-        setPreferredSize(new java.awt.Dimension(900, 580));
         setResizable(false);
         getContentPane().setLayout(null);
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(550, 110, 300, 30);
 
-        jTextField2.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        tfApellido.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
+        tfApellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                tfApellidoActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(320, 140, 310, 30);
-
-        jTextField3.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(320, 180, 310, 30);
+        getContentPane().add(tfApellido);
+        tfApellido.setBounds(120, 180, 300, 30);
 
         jTextField4.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +94,7 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(320, 220, 310, 30);
+        jTextField4.setBounds(120, 240, 300, 30);
 
         jTextField5.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
@@ -93,7 +103,7 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField5);
-        jTextField5.setBounds(320, 260, 310, 30);
+        jTextField5.setBounds(120, 450, 300, 30);
 
         jTextField6.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
@@ -102,7 +112,26 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField6);
-        jTextField6.setBounds(320, 300, 310, 30);
+        jTextField6.setBounds(120, 310, 300, 30);
+
+        tfNombre.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
+        tfNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfNombreActionPerformed(evt);
+            }
+        });
+        getContentPane().add(tfNombre);
+        tfNombre.setBounds(120, 110, 300, 30);
+        getContentPane().add(jTextField8);
+        jTextField8.setBounds(550, 240, 300, 30);
+        getContentPane().add(jTextField9);
+        jTextField9.setBounds(550, 310, 300, 30);
+        getContentPane().add(cargo);
+        cargo.setBounds(550, 180, 300, 30);
+        getContentPane().add(estadoCivil);
+        estadoCivil.setBounds(550, 380, 300, 30);
+        getContentPane().add(jTextField10);
+        jTextField10.setBounds(550, 450, 300, 30);
 
         jPasswordField1.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
@@ -111,43 +140,98 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(320, 340, 310, 30);
+        jPasswordField1.setBounds(120, 380, 300, 30);
 
-        jLabel9.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel9.setText("Usuario:");
+        jLabel9.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel9.setText("Dirección ");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(200, 300, 100, 40);
+        jLabel9.setBounds(20, 430, 100, 40);
 
-        jLabel8.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel8.setText("Correo:");
+        jLabel8.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel8.setText("Celular:");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(200, 260, 100, 40);
+        jLabel8.setBounds(20, 310, 100, 40);
 
-        jLabel7.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel7.setText("Cedula:");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(200, 220, 100, 40);
+        jLabel7.setBounds(20, 240, 100, 40);
 
-        jLabel6.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel6.setText("Apellidos:");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(200, 160, 110, 70);
+        jLabel6.setBounds(20, 160, 110, 70);
 
-        jLabel5.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel5.setText("Contraseña:");
+        jLabel5.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel5.setText("Email");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(200, 340, 130, 40);
+        jLabel5.setBounds(20, 380, 130, 40);
 
-        jLabel4.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel4.setText("Nombres:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(200, 130, 110, 60);
+        jLabel4.setBounds(20, 100, 110, 60);
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
         jLabel1.setText("Registrarse");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(370, 30, 220, 70);
+
+        jLabel12.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel12.setText("Dir. de ");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(460, 220, 130, 30);
+
+        jLabel13.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel13.setText("Empresa:");
+        getContentPane().add(jLabel13);
+        jLabel13.setBounds(460, 110, 100, 30);
+
+        jLabel14.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel14.setText("Cargo:");
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(460, 180, 66, 27);
+
+        jLabel15.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel15.setText("Telf. del ");
+        getContentPane().add(jLabel15);
+        jLabel15.setBounds(460, 280, 100, 50);
+
+        jLabel16.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel16.setText("Estado ");
+        getContentPane().add(jLabel16);
+        jLabel16.setBounds(460, 350, 80, 40);
+
+        jLabel17.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel17.setText("Civil: ");
+        getContentPane().add(jLabel17);
+        jLabel17.setBounds(460, 370, 60, 50);
+
+        jLabel18.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel18.setText("Domiciliar:");
+        getContentPane().add(jLabel18);
+        jLabel18.setBounds(20, 460, 150, 27);
+
+        jLabel19.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel19.setText("Trabajo:");
+        getContentPane().add(jLabel19);
+        jLabel19.setBounds(460, 250, 100, 16);
+
+        jLabel20.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel20.setText("Número");
+        getContentPane().add(jLabel20);
+        jLabel20.setBounds(460, 430, 100, 30);
+
+        jLabel21.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel21.setText("de Hijos:");
+        getContentPane().add(jLabel21);
+        jLabel21.setBounds(460, 450, 100, 30);
+
+        tefTrabajo.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        tefTrabajo.setText("trabajo:");
+        getContentPane().add(tefTrabajo);
+        tefTrabajo.setBounds(460, 320, 90, 27);
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
@@ -163,7 +247,7 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(90, 470, 120, 40);
+        jButton1.setBounds(80, 500, 120, 40);
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
@@ -174,22 +258,28 @@ public class vista_registrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(680, 470, 120, 40);
+        jButton2.setBounds(690, 500, 120, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registro_1.jpg"))); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(-50, -360, 1060, 1100);
 
+        jLabel10.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jLabel10.setText("Usuario:");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(210, 260, 100, 40);
+
+        jLabel11.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jLabel11.setText("Usuario:");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(260, 430, 100, 40);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void tfApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfApellidoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_tfApellidoActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
@@ -214,8 +304,8 @@ public class vista_registrarse extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String nombre = jTextField2.getText();
-        String apellido = jTextField3.getText();
+        String nombre = tfNombre.getText();
+        String apellido = tfApellido.getText();
         String cedula =  jTextField4.getText();
         String correo = jTextField5.getText();
         String user = jTextField6.getText();
@@ -242,6 +332,10 @@ public class vista_registrarse extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void tfNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfNombreActionPerformed
 
     /**
      * @param args the command line arguments
@@ -279,10 +373,24 @@ public class vista_registrarse extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField cargo;
+    private javax.swing.JTextField estadoCivil;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -291,11 +399,16 @@ public class vista_registrarse extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
+    private javax.swing.JLabel tefTrabajo;
+    private javax.swing.JTextField tfApellido;
+    private javax.swing.JTextField tfNombre;
     // End of variables declaration//GEN-END:variables
 
     public boolean RegistrarCliente(String nombre,String apellido,int cedula,String correo,String user, String password){
