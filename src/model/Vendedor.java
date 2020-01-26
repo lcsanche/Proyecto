@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 public class Vendedor{
     
     public boolean GuardarCasaDiseñada(String user, String Nombre, int m2, int numPisos, boolean esEsquinera, String orientacion, String patio, int numHabitaciones, int numBanos){
-        Conexion conexion = new Conexion();
+        Conexion conexion = Conexion.getInstancia();
         try{
             String SQL1 = "SELECT * FROM CasasDiseñadas WHERE IdCliente = '"+user+"' and Metros2 = '"+m2+"' and nPisos = '"+numPisos+"' and Esquinera = '"+esEsquinera+"' and Orientacion = '"+orientacion+"' and TPatio = '"+patio+"' and nHabitaciones = '"+numHabitaciones+"' and nBaños = '"+numBanos+"'";
             String SQL2 = "INSERT INTO CasasDiseñadas(IdCliente,Nombre,Metros2,nPisos,Esquinera,Orientacion,TPatio,nHabitaciones,nBaños) VALUES ('"+user+"','"+Nombre+"','"+m2+"','"+numPisos+"',"+esEsquinera+",'"+orientacion+",'"+patio+",'"+numHabitaciones+",'"+numBanos+"')";
@@ -31,7 +31,7 @@ public class Vendedor{
     }
     
     public void RevisarDatosCliente(String user){
-        Conexion conexion = new Conexion();
+        Conexion conexion = Conexion.getInstancia();
         try{
             ResultSet rs = conexion.consultar("SELECT Nombre,Apellido,Cedula,Correo FROM Cliente WHERE IdCliente = '" + user + "'" );
             rs.last();
@@ -46,7 +46,7 @@ public class Vendedor{
     }
     
     public void RevisarCasaCliente(String user){
-        Conexion conexion = new Conexion();
+        Conexion conexion = Conexion.getInstancia();
         ArrayList<Casa> Casas = new ArrayList();
         try{
             ResultSet rs = conexion.consultar("SELECT * FROM CasasDiseñadas WHERE IdCliente = '" + user + "'" );

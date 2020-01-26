@@ -430,7 +430,7 @@ public class vista_registrarse extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     public boolean RegistrarCliente(String nombre,String apellido,int cedula,String correo,String user, String password){
-        Conexion conexion = new Conexion();
+        Conexion conexion = Conexion.getInstancia();
         try{
             String SQL1 = "SELECT * FROM Cliente WHERE IdCliente = '"+user+"'";
             String SQL2 = "INSERT INTO Cliente(IdCliente,Contraseña,Nombre,Apellido,Cedula,Correo) VALUES ('"+user+"','"+password+"','"+nombre+"','"+apellido+"',"+cedula+",'"+correo+"')";

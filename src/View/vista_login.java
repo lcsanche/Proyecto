@@ -5,6 +5,7 @@
  */
 package View;
 
+import creacional.Usuario;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import model.Conexion;
@@ -196,10 +197,10 @@ public class vista_login extends javax.swing.JFrame {
             dc.setVisible(true);
             dispose();
             //agregar vista del usuario
-        }else if(LoginEmpleado(user, password)== "Admin"){
+        }else if("Admin".equals(LoginEmpleado(user, password))){
             JOptionPane.showMessageDialog(null, "Inicio de Sesion Exitoso");
             //Agregar vista del admin
-        }else if (LoginEmpleado(user, password)== "Vendedor"){
+        }else if ("Vendedor".equals(LoginEmpleado(user, password))){
             //agregar vista del vendedor
         }else{
             JOptionPane.showMessageDialog(null, "El nombre de usuario y/o contrasenia no son validos.");
@@ -207,11 +208,13 @@ public class vista_login extends javax.swing.JFrame {
     }
 
     public boolean LoginCliente(String user, String password){
-        Conexion conexion = new Conexion();
+        Conexion conexion = Conexion.getInstancia();
         try{
             ResultSet resultado = conexion.consultar("SELECT IdCliente FROM Cliente WHERE IdCliente = '" + user + "' and Contraseña = '" + password + "'" );
             resultado.last();
             if (resultado.getRow() > 0){
+                Usuario usuarioactual = Usuario.getInstancia();
+                usuarioactual.setUser(resultado.getString("IdCliente"));
                 return true;
             }
         }catch (Exception e) {
@@ -221,11 +224,13 @@ public class vista_login extends javax.swing.JFrame {
     }
     
     public String LoginEmpleado(String user, String password){
-        Conexion conexion = new Conexion();
+        Conexion conexion = Conexion.getInstancia();
         try{
             ResultSet resultado = conexion.consultar("SELECT Cargo FROM Empleados WHERE IdEmpleado = '" + user + "' and Contraseña = '" + password + "'" );
             resultado.last();
             if (resultado.getRow() > 0){
+                Usuario usuarioactual = Usuario.getInstancia();
+                usuarioactual.setUser(resultado.getString("IdEmpleado"));
                 return resultado.getString("Cargo");
             }   
         }catch (Exception e) {

@@ -11,9 +11,17 @@ package creacional;
  */
 public class Usuario {
     private String user;
+    private static Usuario Instancia;
     
-    public Usuario() {
+    private Usuario() {
         this.user = user;
+    }
+    
+    public static Usuario getInstancia(){
+        if(Instancia==null){
+            Instancia = new Usuario();
+        }
+        return Instancia;
     }
     
     public String getUser() {

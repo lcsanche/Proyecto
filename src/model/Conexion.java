@@ -18,7 +18,17 @@ public class Conexion {
     private final String url = "jdbc:mysql://" + hostname + ":" + port + "/" + database;
     private final String username = "root";
     private final String password = "root";
+    private static Conexion Instancia;
 
+    private Conexion(){};
+    
+    public static Conexion getInstancia(){
+        if(Instancia==null){
+            Instancia = new Conexion();
+        }
+        return Instancia;
+    }
+    
     public Connection ConexionDB() {
         Connection con = null;
         try {

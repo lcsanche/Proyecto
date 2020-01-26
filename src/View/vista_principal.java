@@ -143,7 +143,7 @@ public class vista_principal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Conexion conexion = new Conexion();
+                Conexion conexion = Conexion.getInstancia();
                 conexion.ConexionDB();
                 new vista_principal().setVisible(true);
             }
