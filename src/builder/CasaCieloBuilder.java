@@ -18,7 +18,7 @@ public class CasaCieloBuilder extends CasaBuilder{
 
     @Override
     public void definir_numPisos() { 
-        casa.setNumPisos(3);
+        casa.setNumPisos(2);
     }
 
     @Override

@@ -28,17 +28,19 @@ public class vista_diseno_casa extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setLocation(new java.awt.Point(300, 100));
-        setMaximumSize(new java.awt.Dimension(900, 580));
-        setMinimumSize(new java.awt.Dimension(900, 580));
+        setMaximumSize(new java.awt.Dimension(900, 600));
+        setMinimumSize(new java.awt.Dimension(900, 600));
+        setPreferredSize(new java.awt.Dimension(900, 600));
         getContentPane().setLayout(null);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casa cielo.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(600, 60, 290, 210);
+        jLabel1.setBounds(590, 60, 290, 210);
 
         jLabel2.setFont(new java.awt.Font("Tw Cen MT", 2, 24)); // NOI18N
         jLabel2.setText("Casa Paraiso ");
@@ -142,6 +144,10 @@ public class vista_diseno_casa extends javax.swing.JFrame {
         jLabel9.setBounds(700, 270, 60, 30);
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(70, 100, 2, 2);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpg"))); // NOI18N
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(0, -60, 930, 670);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -250,6 +256,7 @@ public class vista_diseno_casa extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

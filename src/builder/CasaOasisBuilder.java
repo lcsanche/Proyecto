@@ -13,12 +13,12 @@ public class CasaOasisBuilder extends CasaBuilder{
     
     @Override
     public void definir_m2() {
-        casa.setM2(110);
+        casa.setM2(90);
     }
 
     @Override
     public void definir_numPisos() { 
-        casa.setNumPisos(2);
+        casa.setNumPisos(1);
     }
 
     @Override
@@ -33,12 +33,12 @@ public class CasaOasisBuilder extends CasaBuilder{
 
     @Override
     public void indicar_tamanioPatio() {
-        casa.setPatio("Grande");
+        casa.setPatio("Pequeño");
     }
 
     @Override
     public void definir_numHab() {
-        casa.setNumHabitaciones(3);
+        casa.setNumHabitaciones(2);
     }
 
     @Override

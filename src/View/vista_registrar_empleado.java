@@ -52,9 +52,9 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(100, 300));
-        setMaximumSize(new java.awt.Dimension(900, 580));
-        setMinimumSize(new java.awt.Dimension(900, 580));
-        setPreferredSize(new java.awt.Dimension(900, 580));
+        setMaximumSize(new java.awt.Dimension(900, 600));
+        setMinimumSize(new java.awt.Dimension(900, 600));
+        setPreferredSize(new java.awt.Dimension(900, 600));
         setResizable(false);
         getContentPane().setLayout(null);
 

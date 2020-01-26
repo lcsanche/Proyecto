@@ -32,9 +32,9 @@ public class vista_vendedor extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(100, 300));
-        setMaximumSize(new java.awt.Dimension(900, 580));
-        setMinimumSize(new java.awt.Dimension(900, 580));
-        setPreferredSize(new java.awt.Dimension(900, 580));
+        setMaximumSize(new java.awt.Dimension(900, 600));
+        setMinimumSize(new java.awt.Dimension(900, 600));
+        setPreferredSize(new java.awt.Dimension(900, 600));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -50,7 +50,7 @@ public class vista_vendedor extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registro_1.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(-70, -160, 980, 720);
+        jLabel1.setBounds(-70, -150, 980, 720);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

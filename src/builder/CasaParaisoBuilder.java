@@ -13,7 +13,7 @@ public class CasaParaisoBuilder extends CasaBuilder{
     
     @Override
     public void definir_m2() {
-        casa.setM2(90);
+        casa.setM2(110);
     }
 
     @Override
@@ -33,7 +33,7 @@ public class CasaParaisoBuilder extends CasaBuilder{
 
     @Override
     public void indicar_tamanioPatio() {
-        casa.setPatio("Pequeños");
+        casa.setPatio("Grande");
     }
 
     @Override

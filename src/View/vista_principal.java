@@ -37,10 +37,10 @@ public class vista_principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(300, 100));
-        setMaximumSize(new java.awt.Dimension(900, 580));
-        setMinimumSize(new java.awt.Dimension(900, 580));
+        setMaximumSize(new java.awt.Dimension(900, 600));
+        setMinimumSize(new java.awt.Dimension(900, 600));
         setName("principal"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(900, 580));
+        setPreferredSize(new java.awt.Dimension(900, 600));
         setResizable(false);
         getContentPane().setLayout(null);
 
