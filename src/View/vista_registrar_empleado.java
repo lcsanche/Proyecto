@@ -51,7 +51,7 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocation(new java.awt.Point(100, 300));
+        setLocation(new java.awt.Point(300, 100));
         setMaximumSize(new java.awt.Dimension(900, 600));
         setMinimumSize(new java.awt.Dimension(900, 600));
         setPreferredSize(new java.awt.Dimension(900, 600));
@@ -87,7 +87,7 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel5.setText("Email:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(30, 330, 62, 27);
+        jLabel5.setBounds(30, 330, 55, 27);
 
         jLabel6.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel6.setText("Dir. Domicilio:");
@@ -107,7 +107,7 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel9.setText("Cargo:");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(440, 280, 67, 27);
+        jLabel9.setBounds(440, 280, 66, 27);
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
