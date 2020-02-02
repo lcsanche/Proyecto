@@ -175,7 +175,7 @@ public class vista_casa_cielo extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Es esquinera: No");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(460, 290, 130, 21);
+        jLabel9.setBounds(460, 290, 150, 21);
 
         piso.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         piso.setForeground(new java.awt.Color(255, 255, 255));

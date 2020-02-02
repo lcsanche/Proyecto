@@ -144,7 +144,7 @@ public class vista_casa_oasis extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Es esquinera: No");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(460, 290, 130, 21);
+        jLabel9.setBounds(460, 290, 150, 21);
 
         cbGriferia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estandar", "Italina" }));
         getContentPane().add(cbGriferia);

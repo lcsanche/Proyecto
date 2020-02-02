@@ -29,33 +29,35 @@ public class vista_ver_cliente extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         btnBuscar = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        txtID = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbClientes = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         lbClientes = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(900, 600));
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Poor Richard", 0, 24)); // NOI18N
-        jLabel1.setText("Nombre :");
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel1.setText("C.I/Pasaporte:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(70, 60, 120, 50);
+        jLabel1.setBounds(80, 90, 120, 50);
 
         btnBuscar.setText("Buscar");
         getContentPane().add(btnBuscar);
-        btnBuscar.setBounds(550, 70, 110, 30);
+        btnBuscar.setBounds(570, 80, 110, 30);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtIDActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(170, 70, 350, 30);
+        getContentPane().add(txtID);
+        txtID.setBounds(190, 100, 350, 30);
 
         tbClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -69,17 +71,30 @@ public class vista_ver_cliente extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tbClientes);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(60, 112, 770, 390);
+        jScrollPane1.setBounds(60, 140, 770, 360);
 
         jButton1.setText("Ver Casas Prediseñadas");
         getContentPane().add(jButton1);
         jButton1.setBounds(350, 510, 150, 40);
 
-        lbClientes.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        lbClientes.setFont(new java.awt.Font("Tahoma", 1, 45)); // NOI18N
         lbClientes.setForeground(new java.awt.Color(204, 255, 255));
         lbClientes.setText("CLIENTES");
         getContentPane().add(lbClientes);
         lbClientes.setBounds(320, 10, 280, 40);
+
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel2.setText("Nombre :");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(80, 50, 120, 50);
+
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtNombre);
+        txtNombre.setBounds(190, 60, 350, 30);
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpg"))); // NOI18N
         getContentPane().add(fondo);
@@ -88,9 +103,13 @@ public class vista_ver_cliente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtIDActionPerformed
+
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,9 +152,11 @@ public class vista_ver_cliente extends javax.swing.JFrame {
     private javax.swing.JLabel fondo;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lbClientes;
     private javax.swing.JTable tbClientes;
+    private javax.swing.JTextField txtID;
+    private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 }
