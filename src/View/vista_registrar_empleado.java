@@ -5,6 +5,9 @@
  */
 package View;
 
+import Singleton.Conexion;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author PC-4
@@ -52,9 +55,7 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(300, 100));
-        setMaximumSize(new java.awt.Dimension(900, 600));
         setMinimumSize(new java.awt.Dimension(900, 600));
-        setPreferredSize(new java.awt.Dimension(900, 600));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -156,7 +157,30 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+        String nombre = jTextField1.getText();
+        String apellido = jTextField2.getText();
+        String cedula =  jTextField3.getText();
+        String correo = jTextField4.getText();
+        String celular = jTextField5.getText();
+        String TelfTra = jTextField6.getText();
+        String Direccion = jTextField7.getText();
+        String EstadoCivil = jTextField8.getText();
+        String Cargo = jTextField9.getText();
+        /*String user = jTextField.getText();
+        String password = new String(jPasswordField1.getPassword());
+        if (nombre.length() > 0 && apellido.length() > 0 && cedula.length() > 0 && celular.length() > 0 && Direccion.length() > 0 && correo.length() > 0 && Cargo.length() > 0 
+        && TelfTra.length() > 0 && EstadoCivil.length() > 0 &&user.length() > 0 && password.length() > 0 ){
+            if(RegistrarEmpleado(IdEmpleado,Contraseña,Nombre,Apellido,Cedula,Celular,Correo,Direccion,telTrabajo,EstadoCivil,Cargo)){
+                JOptionPane.showMessageDialog(null, "Registro Exitoso");
+                vista_login vlog= new vista_login();
+                vlog.setVisible(true);
+                dispose();
+            }else{
+                JOptionPane.showMessageDialog(null, "El Usuario ya se encuentra registrado");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Los Campos son Obligatorios");
+        } */
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
@@ -224,4 +248,19 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
+
+    public boolean RegistrarEmpleado(String user, String password,String nombre,String apellido,String cedula,String Celular, String correo, String Direccion, String TelfTra, String EstadoCivil, String Cargo){
+        Conexion conexion = Conexion.getInstancia();
+        try{
+            String SQL1 = "SELECT * FROM Empleados WHERE IdCliente = '"+user+"'";
+            String SQL2 = "INSERT Empleados(IdEmpleado,Contraseña,Nombre,Apellido,Cedula,Celular,Correo,Direccion,telTrabajo,EstadoCivil,Cargo) VALUES ('"+user+"','"+password+"','"+nombre+"','"+apellido+"','"+cedula+"','"+Celular+"','"+correo+"','"+Direccion+"','"+TelfTra+"','"+EstadoCivil+"','"+Cargo+"')";
+            if(conexion.Actualizar(SQL1, SQL2)){
+                return true;
+            }else{return false;}
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 }
