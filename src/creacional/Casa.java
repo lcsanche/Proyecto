@@ -5,7 +5,9 @@
  */
 package creacional;
 
-import model.Conexion;
+import Decorator.Acabado;
+import Singleton.Conexion;
+import java.util.LinkedList;
 
 /**
  *
@@ -19,10 +21,14 @@ public class Casa {
      public String patio;
      public int numHabitaciones;
      public int numBanos;
+     public LinkedList<Acabado> acabados;
+     public float precio;
      
-     public Casa(){}
+     public Casa(){this.acabados = new LinkedList<>();
+}
 
     public Casa(int m2, int numPisos, boolean esEsquinera, String orientacion, String patio, int numHabitaciones, int numBanos) {
+        this.acabados = new LinkedList<>();
         this.m2 = m2;
         this.numPisos = numPisos;
         this.esEsquinera = esEsquinera;
@@ -86,6 +92,22 @@ public class Casa {
 
     public void setNumBanos(int numBanos) {
         this.numBanos = numBanos;
+    }
+
+    public LinkedList<Acabado> getAcabados() {
+        return acabados;
+    }
+
+    public float getPrecio() {
+        return precio;
+    }
+
+    public void setAcabados(LinkedList<Acabado> acabados) {
+        this.acabados = acabados;
+    }
+
+    public void setPrecio(float precio) {
+        this.precio = precio;
     }
      
      
