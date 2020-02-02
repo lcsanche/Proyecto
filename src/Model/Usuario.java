@@ -23,12 +23,4 @@ public class Usuario {
     public void setUser(String user) {
         this.user = user;
     }
-
-    @Override
-    public String toString() {
-        return "Usuario{" + "user=" + user + '}';
-    }
-    
-    
-    
 }

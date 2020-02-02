@@ -15,7 +15,7 @@ import Singleton.Conexion;
  * @author PC-4
  */
 public class vista_login extends javax.swing.JFrame {
-
+    Usuario usuarioactual;
     /**
      * Creates new form vista_login
      */
@@ -217,7 +217,7 @@ public class vista_login extends javax.swing.JFrame {
             ResultSet resultado = conexion.consultar("SELECT IdCliente FROM Cliente WHERE IdCliente = '" + user + "' and Contraseña = '" + password + "'" );
             resultado.last();
             if (resultado.getRow() > 0){
-                Usuario usuarioactual = new Usuario(user);
+                usuarioactual = new Usuario(user);
                 return true;
             }
         }catch (Exception e) {
@@ -232,8 +232,7 @@ public class vista_login extends javax.swing.JFrame {
             ResultSet resultado = conexion.consultar("SELECT Cargo FROM Empleados WHERE IdEmpleado = '" + user + "' and Contraseña = '" + password + "'" );
             resultado.last();
             if (resultado.getRow() > 0){
-                Usuario usuarioactual = new Usuario(user);
-                System.out.println(usuarioactual);
+                usuarioactual = new Usuario(user);
                 return resultado.getString("Cargo");
             }   
         }catch (Exception e) {

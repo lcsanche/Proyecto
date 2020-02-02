@@ -74,9 +74,7 @@ public class vista_registrarse extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(300, 100));
-        setMaximumSize(new java.awt.Dimension(900, 600));
         setMinimumSize(new java.awt.Dimension(900, 600));
-        setPreferredSize(new java.awt.Dimension(900, 600));
         setResizable(false);
         getContentPane().setLayout(null);
         getContentPane().add(jTextField1);
@@ -316,15 +314,24 @@ public class vista_registrarse extends javax.swing.JFrame {
         String nombre = tfNombre.getText();
         String apellido = tfApellido.getText();
         String cedula =  jTextField4.getText();
-        String correo = jTextField5.getText();
-        String user = jTextField6.getText();
+        String correo = jTextField2.getText();
+        String Direccion = jTextField5.getText();
+        String celular = jTextField6.getText();
+        String Empresa = jTextField1.getText();
+        String Cargo = cargo.getText();
+        String DirTra = jTextField8.getText();
+        String TelfTra = jTextField9.getText();
+        String EstadoCivil = estadoCivil.getText();
+        String NumHijos = jTextField10.getText();
+        String user = jTextField3.getText();
         String password = new String(jPasswordField1.getPassword());
-        if (nombre.length() > 0 && apellido.length() > 0 && cedula.length() > 0 && correo.length() > 0 &&user.length() > 0 && password.length() > 0 ){
-            if(RegistrarCliente(nombre,apellido,Integer. parseInt(cedula),correo,user,password)){
+        if (nombre.length() > 0 && apellido.length() > 0 && cedula.length() > 0 && celular.length() > 0 && Direccion.length() > 0 && correo.length() > 0 && Empresa.length() > 0 
+            && Cargo.length() > 0 && DirTra.length() > 0 && TelfTra.length() > 0 && EstadoCivil.length() > 0 && NumHijos.length() > 0 &&user.length() > 0 && password.length() > 0 ){
+            if(RegistrarCliente(user,password,nombre,apellido,cedula,celular,Direccion,correo,Empresa,Cargo,DirTra,TelfTra,EstadoCivil,NumHijos)){
                 JOptionPane.showMessageDialog(null, "Registro Exitoso");
                 vista_login vlog= new vista_login();
                 vlog.setVisible(true);
-        dispose();
+                dispose();
             }else{
                 JOptionPane.showMessageDialog(null, "El Usuario ya se encuentra registrado");
             }
@@ -430,11 +437,11 @@ public class vista_registrarse extends javax.swing.JFrame {
     private javax.swing.JTextField tfNombre;
     // End of variables declaration//GEN-END:variables
 
-    public boolean RegistrarCliente(String nombre,String apellido,int cedula,String correo,String user, String password){
+    public boolean RegistrarCliente(String user, String password,String nombre,String apellido,String cedula,String Celular, String Direccion, String correo, String Empresa, String Cargo, String DirTra, String TelfTra, String EstadoCivil, String NumHijos){
         Conexion conexion = Conexion.getInstancia();
         try{
             String SQL1 = "SELECT * FROM Cliente WHERE IdCliente = '"+user+"'";
-            String SQL2 = "INSERT INTO Cliente(IdCliente,Contraseña,Nombre,Apellido,Cedula,Correo) VALUES ('"+user+"','"+password+"','"+nombre+"','"+apellido+"',"+cedula+",'"+correo+"')";
+            String SQL2 = "INSERT INTO Cliente(IdCliente,Contraseña,Nombre,Apellido,Cedula,Celular,Direccion,Correo,Empresa,Cargo,DirTra,TelfTra,EstadoCivil,NumHijos) VALUES ('"+user+"','"+password+"','"+nombre+"','"+apellido+"','"+cedula+"','"+Celular+"','"+Direccion+"','"+correo+"','"+Empresa+"','"+Cargo+"','"+DirTra+"','"+TelfTra+"','"+EstadoCivil+"','"+NumHijos+"')";
             if(conexion.Actualizar(SQL1, SQL2)){
                 return true;
             }else{return false;}

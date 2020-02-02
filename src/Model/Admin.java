@@ -9,10 +9,10 @@ package Model;
  *
  * @author lcsan
  */
-public class Administrador{
+public class Admin{
     
     public void AgregarEmpleado(){
-        //Definir el Metodo
+        //Definir el Metododd
     }
     
     public void EliminarEmpleado(){
