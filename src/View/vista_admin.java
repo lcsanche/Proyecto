@@ -27,9 +27,11 @@ public class vista_admin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnAdmEmpleado = new javax.swing.JButton();
+        btnAgregarEmpleado = new javax.swing.JButton();
         btnAdmCasa = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
+        btnRegistroEmpleados = new javax.swing.JButton();
+        btnRegistroCasas = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -38,14 +40,14 @@ public class vista_admin extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(900, 600));
         getContentPane().setLayout(null);
 
-        btnAdmEmpleado.setText("Empleados");
-        btnAdmEmpleado.addActionListener(new java.awt.event.ActionListener() {
+        btnAgregarEmpleado.setText("Empleados");
+        btnAgregarEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdmEmpleadoActionPerformed(evt);
+                btnAgregarEmpleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAdmEmpleado);
-        btnAdmEmpleado.setBounds(90, 370, 140, 40);
+        getContentPane().add(btnAgregarEmpleado);
+        btnAgregarEmpleado.setBounds(20, 390, 140, 40);
 
         btnAdmCasa.setText("Casas");
         btnAdmCasa.addActionListener(new java.awt.event.ActionListener() {
@@ -54,7 +56,7 @@ public class vista_admin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnAdmCasa);
-        btnAdmCasa.setBounds(340, 370, 140, 40);
+        btnAdmCasa.setBounds(250, 390, 140, 40);
 
         btnSalir.setText("Cerrar Sesión");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -65,31 +67,61 @@ public class vista_admin extends javax.swing.JFrame {
         getContentPane().add(btnSalir);
         btnSalir.setBounds(740, 40, 110, 40);
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo_adm.jpg"))); // NOI18N
+        btnRegistroEmpleados.setText("Registro Empleados");
+        btnRegistroEmpleados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistroEmpleadosActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnRegistroEmpleados);
+        btnRegistroEmpleados.setBounds(470, 390, 150, 40);
+
+        btnRegistroCasas.setText("Registro Casas");
+        btnRegistroCasas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistroCasasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnRegistroCasas);
+        btnRegistroCasas.setBounds(680, 390, 150, 40);
+
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoAdmin.jpg"))); // NOI18N
         fondo.setText("jLabel1");
         getContentPane().add(fondo);
-        fondo.setBounds(-30, -210, 940, 780);
+        fondo.setBounds(-90, -190, 1020, 780);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAdmCasaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdmCasaActionPerformed
-        vista_admCasa ac= new vista_admCasa();
-        ac.setVisible(true);
+        vista_crearCasaPredisenada cp= new vista_crearCasaPredisenada();
+        cp.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnAdmCasaActionPerformed
 
-    private void btnAdmEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdmEmpleadoActionPerformed
-        vista_admEmpleado ae= new vista_admEmpleado();
+    private void btnAgregarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarEmpleadoActionPerformed
+        vista_registrar_empleado ae= new vista_registrar_empleado();
         ae.setVisible(true);
         dispose();
-    }//GEN-LAST:event_btnAdmEmpleadoActionPerformed
+    }//GEN-LAST:event_btnAgregarEmpleadoActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         vista_principal vp= new vista_principal();
         vp.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnRegistroEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroEmpleadosActionPerformed
+       vista_admEmpleado e= new vista_admEmpleado();
+       e.setVisible(true);
+       dispose();
+    }//GEN-LAST:event_btnRegistroEmpleadosActionPerformed
+
+    private void btnRegistroCasasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroCasasActionPerformed
+        vista_admCasa c= new vista_admCasa();
+        c.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnRegistroCasasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -128,7 +160,9 @@ public class vista_admin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdmCasa;
-    private javax.swing.JButton btnAdmEmpleado;
+    private javax.swing.JButton btnAgregarEmpleado;
+    private javax.swing.JButton btnRegistroCasas;
+    private javax.swing.JButton btnRegistroEmpleados;
     private javax.swing.JButton btnSalir;
     private javax.swing.JLabel fondo;
     // End of variables declaration//GEN-END:variables

@@ -34,7 +34,6 @@ public class vista_admEmpleado extends javax.swing.JFrame {
         txtID = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         TbEmpleados = new javax.swing.JTable();
-        btnRegistrarEmpleado = new javax.swing.JButton();
         btnEditarEmpleado = new javax.swing.JButton();
         btnEliminarEmpleado = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
@@ -77,18 +76,9 @@ public class vista_admEmpleado extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(90, 120, 630, 402);
 
-        btnRegistrarEmpleado.setText("Registar");
-        btnRegistrarEmpleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistrarEmpleadoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnRegistrarEmpleado);
-        btnRegistrarEmpleado.setBounds(760, 210, 90, 40);
-
         btnEditarEmpleado.setText("Editar");
         getContentPane().add(btnEditarEmpleado);
-        btnEditarEmpleado.setBounds(760, 300, 90, 40);
+        btnEditarEmpleado.setBounds(750, 260, 90, 40);
 
         btnEliminarEmpleado.setText("Eliminar");
         btnEliminarEmpleado.addActionListener(new java.awt.event.ActionListener() {
@@ -97,7 +87,7 @@ public class vista_admEmpleado extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnEliminarEmpleado);
-        btnEliminarEmpleado.setBounds(760, 390, 90, 40);
+        btnEliminarEmpleado.setBounds(750, 360, 90, 40);
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpg"))); // NOI18N
         getContentPane().add(fondo);
@@ -109,12 +99,6 @@ public class vista_admEmpleado extends javax.swing.JFrame {
     private void btnEliminarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarEmpleadoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEliminarEmpleadoActionPerformed
-
-    private void btnRegistrarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarEmpleadoActionPerformed
-        vista_registrar_empleado re= new vista_registrar_empleado();
-        re.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_btnRegistrarEmpleadoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,7 +140,6 @@ public class vista_admEmpleado extends javax.swing.JFrame {
     private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnEditarEmpleado;
     private javax.swing.JButton btnEliminarEmpleado;
-    private javax.swing.JButton btnRegistrarEmpleado;
     private javax.swing.JLabel fondo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

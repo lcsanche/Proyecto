@@ -32,7 +32,6 @@ public class vista_admCasa extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         TbEmpleados = new javax.swing.JTable();
-        btnCrearCasa = new javax.swing.JButton();
         btnEditarCasa = new javax.swing.JButton();
         btnEliminarCasa = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
@@ -66,13 +65,9 @@ public class vista_admCasa extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(80, 100, 630, 402);
 
-        btnCrearCasa.setText("Crear");
-        getContentPane().add(btnCrearCasa);
-        btnCrearCasa.setBounds(760, 210, 90, 40);
-
         btnEditarCasa.setText("Editar");
         getContentPane().add(btnEditarCasa);
-        btnEditarCasa.setBounds(760, 300, 90, 40);
+        btnEditarCasa.setBounds(750, 230, 90, 40);
 
         btnEliminarCasa.setText("Eliminar");
         btnEliminarCasa.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +76,7 @@ public class vista_admCasa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnEliminarCasa);
-        btnEliminarCasa.setBounds(760, 390, 90, 40);
+        btnEliminarCasa.setBounds(750, 340, 90, 40);
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpg"))); // NOI18N
         getContentPane().add(fondo);
@@ -135,7 +130,6 @@ public class vista_admCasa extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable TbEmpleados;
     private javax.swing.JButton btnBuscar;
-    private javax.swing.JButton btnCrearCasa;
     private javax.swing.JButton btnEditarCasa;
     private javax.swing.JButton btnEliminarCasa;
     private javax.swing.JLabel fondo;
