@@ -9,12 +9,12 @@ package View;
  *
  * @author PC-4
  */
-public class vista_admEmpleado extends javax.swing.JFrame {
+public class vista_admCasa extends javax.swing.JFrame {
 
     /**
      * Creates new form vista_admEmpleado
      */
-    public vista_admEmpleado() {
+    public vista_admCasa() {
         initComponents();
     }
 
@@ -30,38 +30,27 @@ public class vista_admEmpleado extends javax.swing.JFrame {
         txtNombre = new javax.swing.JTextField();
         btnBuscar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        txtID = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         TbEmpleados = new javax.swing.JTable();
-        btnRegistrarEmpleado = new javax.swing.JButton();
-        btnEditarEmpleado = new javax.swing.JButton();
-        btnEliminarEmpleado = new javax.swing.JButton();
+        btnCrearCasa = new javax.swing.JButton();
+        btnEditarCasa = new javax.swing.JButton();
+        btnEliminarCasa = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(900, 600));
         setMinimumSize(new java.awt.Dimension(900, 600));
-        setPreferredSize(new java.awt.Dimension(900, 600));
         getContentPane().setLayout(null);
         getContentPane().add(txtNombre);
         txtNombre.setBounds(170, 30, 310, 30);
 
         btnBuscar.setText("Buscar");
         getContentPane().add(btnBuscar);
-        btnBuscar.setBounds(510, 60, 80, 30);
+        btnBuscar.setBounds(520, 30, 80, 30);
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel1.setText("Nombre:");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(40, 30, 80, 30);
-
-        jLabel2.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
-        jLabel2.setText("C.I/ Pasaporte:");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(40, 80, 140, 30);
-        getContentPane().add(txtID);
-        txtID.setBounds(170, 80, 310, 30);
 
         TbEmpleados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -75,29 +64,24 @@ public class vista_admEmpleado extends javax.swing.JFrame {
         jScrollPane1.setViewportView(TbEmpleados);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(90, 120, 630, 402);
+        jScrollPane1.setBounds(80, 100, 630, 402);
 
-        btnRegistrarEmpleado.setText("Registar");
-        btnRegistrarEmpleado.addActionListener(new java.awt.event.ActionListener() {
+        btnCrearCasa.setText("Crear");
+        getContentPane().add(btnCrearCasa);
+        btnCrearCasa.setBounds(760, 210, 90, 40);
+
+        btnEditarCasa.setText("Editar");
+        getContentPane().add(btnEditarCasa);
+        btnEditarCasa.setBounds(760, 300, 90, 40);
+
+        btnEliminarCasa.setText("Eliminar");
+        btnEliminarCasa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistrarEmpleadoActionPerformed(evt);
+                btnEliminarCasaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistrarEmpleado);
-        btnRegistrarEmpleado.setBounds(760, 210, 90, 40);
-
-        btnEditarEmpleado.setText("Editar");
-        getContentPane().add(btnEditarEmpleado);
-        btnEditarEmpleado.setBounds(760, 300, 90, 40);
-
-        btnEliminarEmpleado.setText("Eliminar");
-        btnEliminarEmpleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarEmpleadoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnEliminarEmpleado);
-        btnEliminarEmpleado.setBounds(760, 390, 90, 40);
+        getContentPane().add(btnEliminarCasa);
+        btnEliminarCasa.setBounds(760, 390, 90, 40);
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpg"))); // NOI18N
         getContentPane().add(fondo);
@@ -106,15 +90,9 @@ public class vista_admEmpleado extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnEliminarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarEmpleadoActionPerformed
+    private void btnEliminarCasaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarCasaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarEmpleadoActionPerformed
-
-    private void btnRegistrarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarEmpleadoActionPerformed
-        vista_registrar_empleado re= new vista_registrar_empleado();
-        re.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_btnRegistrarEmpleadoActionPerformed
+    }//GEN-LAST:event_btnEliminarCasaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,20 +111,23 @@ public class vista_admEmpleado extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(vista_admEmpleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vista_admCasa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(vista_admEmpleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vista_admCasa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(vista_admEmpleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vista_admCasa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(vista_admEmpleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vista_admCasa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new vista_admEmpleado().setVisible(true);
+                new vista_admCasa().setVisible(true);
             }
         });
     }
@@ -154,14 +135,12 @@ public class vista_admEmpleado extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable TbEmpleados;
     private javax.swing.JButton btnBuscar;
-    private javax.swing.JButton btnEditarEmpleado;
-    private javax.swing.JButton btnEliminarEmpleado;
-    private javax.swing.JButton btnRegistrarEmpleado;
+    private javax.swing.JButton btnCrearCasa;
+    private javax.swing.JButton btnEditarCasa;
+    private javax.swing.JButton btnEliminarCasa;
     private javax.swing.JLabel fondo;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField txtID;
     private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 }

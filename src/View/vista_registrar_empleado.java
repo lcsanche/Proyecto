@@ -61,7 +61,7 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
         Nombre.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         Nombre.setText("Nombres:");
         getContentPane().add(Nombre);
-        Nombre.setBounds(50, 120, 110, 50);
+        Nombre.setBounds(30, 120, 110, 50);
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
@@ -72,42 +72,42 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel2.setText("Estado Civil:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(460, 230, 130, 27);
+        jLabel2.setBounds(440, 230, 130, 27);
 
         Apellido.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         Apellido.setText("Apellidos:");
         getContentPane().add(Apellido);
-        Apellido.setBounds(50, 170, 110, 50);
+        Apellido.setBounds(30, 170, 110, 50);
 
         jLabel4.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel4.setText("Cedula:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(50, 220, 80, 50);
+        jLabel4.setBounds(30, 220, 80, 50);
 
         jLabel5.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel5.setText("Email:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(50, 330, 55, 27);
+        jLabel5.setBounds(30, 330, 62, 27);
 
         jLabel6.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel6.setText("Dir. Domicilio:");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(460, 180, 130, 30);
+        jLabel6.setBounds(440, 180, 150, 30);
 
         jLabel7.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel7.setText("Telf. Trabajo:");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(460, 130, 130, 27);
+        jLabel7.setBounds(440, 130, 140, 27);
 
         jLabel8.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel8.setText("Celular:");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(50, 260, 130, 70);
+        jLabel8.setBounds(30, 260, 130, 70);
 
         jLabel9.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel9.setText("Cargo:");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(460, 280, 66, 27);
+        jLabel9.setBounds(440, 280, 67, 27);
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,15 +115,15 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(160, 130, 270, 30);
+        jTextField1.setBounds(150, 130, 270, 30);
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(160, 180, 270, 30);
+        jTextField2.setBounds(150, 180, 270, 30);
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(160, 230, 270, 30);
+        jTextField3.setBounds(150, 230, 270, 30);
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(160, 330, 270, 30);
+        jTextField4.setBounds(150, 330, 270, 30);
         getContentPane().add(jTextField5);
-        jTextField5.setBounds(160, 280, 270, 30);
+        jTextField5.setBounds(150, 280, 270, 30);
         getContentPane().add(jTextField6);
         jTextField6.setBounds(590, 130, 280, 30);
         getContentPane().add(jTextField7);

@@ -69,7 +69,9 @@ public class vista_admin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAdmCasaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdmCasaActionPerformed
-        // TODO add your handling code here:
+        vista_admCasa ac= new vista_admCasa();
+        ac.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnAdmCasaActionPerformed
 
     private void btnAdmEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdmEmpleadoActionPerformed
