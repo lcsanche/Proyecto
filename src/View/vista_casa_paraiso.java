@@ -39,6 +39,11 @@ public class vista_casa_paraiso extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        cbGriferia = new javax.swing.JComboBox<>();
+        cbPiso1 = new javax.swing.JComboBox<>();
+        cbIluminacion = new javax.swing.JComboBox<>();
+        cbBanio = new javax.swing.JComboBox<>();
+        cbTecho = new javax.swing.JComboBox<>();
         piso = new javax.swing.JLabel();
         griferia = new javax.swing.JLabel();
         iluminacion = new javax.swing.JLabel();
@@ -141,30 +146,55 @@ public class vista_casa_paraiso extends javax.swing.JFrame {
         getContentPane().add(jLabel9);
         jLabel9.setBounds(460, 290, 130, 21);
 
+        cbGriferia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estandar", "Italina" }));
+        getContentPane().add(cbGriferia);
+        cbGriferia.setBounds(200, 430, 150, 30);
+        cbGriferia.setVisible(false);
+
+        cbPiso1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Porcelanato Nacional", "Porcelanato Importado" }));
+        getContentPane().add(cbPiso1);
+        cbPiso1.setBounds(10, 430, 160, 30);
+        cbPiso1.setVisible(false);
+
+        cbIluminacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tradicional", "Led" }));
+        getContentPane().add(cbIluminacion);
+        cbIluminacion.setBounds(380, 430, 130, 30);
+        cbIluminacion.setVisible(false);
+
+        cbBanio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Insonorizados", "Tradicionales" }));
+        getContentPane().add(cbBanio);
+        cbBanio.setBounds(540, 430, 130, 30);
+        cbBanio.setVisible(false);
+
+        cbTecho.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aisalente Termico", "Normal" }));
+        getContentPane().add(cbTecho);
+        cbTecho.setBounds(700, 430, 150, 30);
+        cbTecho.setVisible(false);
+
         piso.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         piso.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(piso);
-        piso.setBounds(60, 390, 140, 40);
+        piso.setBounds(40, 390, 90, 40);
 
         griferia.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         griferia.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(griferia);
-        griferia.setBounds(200, 390, 120, 40);
+        griferia.setBounds(230, 390, 120, 40);
 
         iluminacion.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         iluminacion.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(iluminacion);
-        iluminacion.setBounds(350, 391, 120, 40);
+        iluminacion.setBounds(400, 390, 120, 40);
 
         banios.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         banios.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(banios);
-        banios.setBounds(510, 391, 110, 40);
+        banios.setBounds(550, 390, 110, 40);
 
         techo.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         techo.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(techo);
-        techo.setBounds(670, 390, 100, 40);
+        techo.setBounds(710, 390, 100, 40);
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpg"))); // NOI18N
         fondo.setText("jLabel1");
@@ -186,11 +216,16 @@ public class vista_casa_paraiso extends javax.swing.JFrame {
      
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        piso.setText("Piso");
+       piso.setText("Piso");
         griferia.setText("Griferia");
         iluminacion.setText("Iluminación");
         banios.setText("Baños");
         techo.setText("Techo");
+        cbGriferia.setVisible(true);
+        cbPiso1.setVisible(true);
+        cbIluminacion.setVisible(true);
+        cbBanio.setVisible(true);
+        cbTecho.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -222,6 +257,10 @@ public class vista_casa_paraiso extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -238,6 +277,11 @@ public class vista_casa_paraiso extends javax.swing.JFrame {
     private javax.swing.JButton bGuardar;
     private javax.swing.JLabel banios;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JComboBox<String> cbBanio;
+    private javax.swing.JComboBox<String> cbGriferia;
+    private javax.swing.JComboBox<String> cbIluminacion;
+    private javax.swing.JComboBox<String> cbPiso1;
+    private javax.swing.JComboBox<String> cbTecho;
     private javax.swing.JLabel fondo;
     private javax.swing.JLabel griferia;
     private javax.swing.JLabel iluminacion;

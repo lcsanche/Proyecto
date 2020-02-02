@@ -27,11 +27,15 @@ public class vista_ver_cliente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        fondo = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(900, 600));
         setMinimumSize(new java.awt.Dimension(900, 600));
-        setPreferredSize(new java.awt.Dimension(900, 600));
         getContentPane().setLayout(null);
+
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpg"))); // NOI18N
+        getContentPane().add(fondo);
+        fondo.setBounds(-30, -30, 950, 610);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -62,6 +66,7 @@ public class vista_ver_cliente extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(vista_ver_cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -72,5 +77,6 @@ public class vista_ver_cliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel fondo;
     // End of variables declaration//GEN-END:variables
 }
