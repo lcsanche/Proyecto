@@ -5,7 +5,7 @@
  */
 package View;
 
-import model.Conexion;
+import Singleton.Conexion;
 
 /**
  *

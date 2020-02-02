@@ -7,7 +7,7 @@ package View;
 
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
-import model.Conexion;
+import Singleton.Conexion;
 
 /**
  *

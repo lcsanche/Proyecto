@@ -3,25 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package creacional;
+package Model;
 
 /**
  *
  * @author lcsan
  */
 public class Usuario {
-    private String user;
-    private static Usuario Instancia;
+    protected String user;
     
-    private Usuario() {
+    public Usuario(String user) {
         this.user = user;
-    }
-    
-    public static Usuario getInstancia(){
-        if(Instancia==null){
-            Instancia = new Usuario();
-        }
-        return Instancia;
     }
     
     public String getUser() {
@@ -31,5 +23,12 @@ public class Usuario {
     public void setUser(String user) {
         this.user = user;
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "user=" + user + '}';
+    }
+    
+    
     
 }

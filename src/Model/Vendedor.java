@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Singleton;
+package Model;
 
+import Singleton.Conexion;
 import creacional.Casa;
 import java.sql.ResultSet;
 import java.util.ArrayList;

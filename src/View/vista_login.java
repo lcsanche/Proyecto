@@ -5,10 +5,10 @@
  */
 package View;
 
-import creacional.Usuario;
+import Model.Usuario;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
-import model.Conexion;
+import Singleton.Conexion;
 
 /**
  *
@@ -196,10 +196,8 @@ public class vista_login extends javax.swing.JFrame {
             vista_diseno_casa dc = new vista_diseno_casa();
             dc.setVisible(true);
             dispose();
-            //agregar vista del usuario
         }else if("Admin".equals(LoginEmpleado(user, password))){
             JOptionPane.showMessageDialog(null, "Inicio de Sesion Exitoso");
-            //Agregar vista del admin
             vista_admin a= new vista_admin();
             a.setVisible(true);
             dispose();
@@ -219,8 +217,7 @@ public class vista_login extends javax.swing.JFrame {
             ResultSet resultado = conexion.consultar("SELECT IdCliente FROM Cliente WHERE IdCliente = '" + user + "' and Contraseña = '" + password + "'" );
             resultado.last();
             if (resultado.getRow() > 0){
-                Usuario usuarioactual = Usuario.getInstancia();
-                usuarioactual.setUser(resultado.getString("IdCliente"));
+                Usuario usuarioactual = new Usuario(user);
                 return true;
             }
         }catch (Exception e) {
@@ -235,8 +232,8 @@ public class vista_login extends javax.swing.JFrame {
             ResultSet resultado = conexion.consultar("SELECT Cargo FROM Empleados WHERE IdEmpleado = '" + user + "' and Contraseña = '" + password + "'" );
             resultado.last();
             if (resultado.getRow() > 0){
-                Usuario usuarioactual = Usuario.getInstancia();
-                usuarioactual.setUser(resultado.getString("IdEmpleado"));
+                Usuario usuarioactual = new Usuario(user);
+                System.out.println(usuarioactual);
                 return resultado.getString("Cargo");
             }   
         }catch (Exception e) {
