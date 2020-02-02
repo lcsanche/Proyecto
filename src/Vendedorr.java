@@ -1,21 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package model;
-
 import Singleton.Conexion;
 import creacional.Casa;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import model.Cliente;
 
 /**
  *
  * @author lcsan
  */
-public class Vendedor{
+public class Vendedorr{
     
     public boolean GuardarCasaDiseñada(String user, String Nombre, int m2, int numPisos, boolean esEsquinera, String orientacion, String patio, int numHabitaciones, int numBanos){
         Conexion conexion = Conexion.getInstancia();

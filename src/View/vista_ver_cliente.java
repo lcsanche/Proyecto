@@ -137,7 +137,9 @@ public class vista_ver_cliente extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
-        // TODO add your handling code here:
+        vista_vendedor v= new vista_vendedor();
+        v.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     /**
