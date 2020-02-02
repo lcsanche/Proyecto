@@ -39,6 +39,11 @@ public class vista_admin extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         btnAdmEmpleado.setText("Empleados");
+        btnAdmEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdmEmpleadoActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnAdmEmpleado);
         btnAdmEmpleado.setBounds(90, 370, 140, 40);
 
@@ -66,6 +71,12 @@ public class vista_admin extends javax.swing.JFrame {
     private void btnAdmCasaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdmCasaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAdmCasaActionPerformed
+
+    private void btnAdmEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdmEmpleadoActionPerformed
+        vista_admEmpleado ae= new vista_admEmpleado();
+        ae.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnAdmEmpleadoActionPerformed
 
     /**
      * @param args the command line arguments
