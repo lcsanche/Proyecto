@@ -200,7 +200,11 @@ public class vista_login extends javax.swing.JFrame {
         }else if("Admin".equals(LoginEmpleado(user, password))){
             JOptionPane.showMessageDialog(null, "Inicio de Sesion Exitoso");
             //Agregar vista del admin
+            vista_admin a= new vista_admin();
+            a.setVisible(true);
+            dispose();
         }else if ("Vendedor".equals(LoginEmpleado(user, password))){
+            JOptionPane.showMessageDialog(null, "Inicio de Sesion Exitoso");
              vista_vendedor v= new vista_vendedor();
              v.setVisible(true);
              dispose();

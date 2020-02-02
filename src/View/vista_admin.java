@@ -27,6 +27,9 @@ public class vista_admin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnAdmEmpleado = new javax.swing.JButton();
+        btnAdmCasa = new javax.swing.JButton();
+        btnAdmRegistro = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -35,13 +38,34 @@ public class vista_admin extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(900, 600));
         getContentPane().setLayout(null);
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpg"))); // NOI18N
+        btnAdmEmpleado.setText("Empleados");
+        getContentPane().add(btnAdmEmpleado);
+        btnAdmEmpleado.setBounds(90, 370, 140, 40);
+
+        btnAdmCasa.setText("Casas");
+        btnAdmCasa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdmCasaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnAdmCasa);
+        btnAdmCasa.setBounds(340, 370, 140, 40);
+
+        btnAdmRegistro.setText("Registro de Datos");
+        getContentPane().add(btnAdmRegistro);
+        btnAdmRegistro.setBounds(630, 370, 140, 40);
+
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo_adm.jpg"))); // NOI18N
         fondo.setText("jLabel1");
         getContentPane().add(fondo);
-        fondo.setBounds(0, 0, 940, 570);
+        fondo.setBounds(-30, -210, 940, 780);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAdmCasaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdmCasaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAdmCasaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,6 +103,9 @@ public class vista_admin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdmCasa;
+    private javax.swing.JButton btnAdmEmpleado;
+    private javax.swing.JButton btnAdmRegistro;
     private javax.swing.JLabel fondo;
     // End of variables declaration//GEN-END:variables
 }
