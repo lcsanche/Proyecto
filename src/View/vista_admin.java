@@ -29,7 +29,7 @@ public class vista_admin extends javax.swing.JFrame {
 
         btnAdmEmpleado = new javax.swing.JButton();
         btnAdmCasa = new javax.swing.JButton();
-        btnAdmRegistro = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -56,9 +56,14 @@ public class vista_admin extends javax.swing.JFrame {
         getContentPane().add(btnAdmCasa);
         btnAdmCasa.setBounds(340, 370, 140, 40);
 
-        btnAdmRegistro.setText("Registro de Datos");
-        getContentPane().add(btnAdmRegistro);
-        btnAdmRegistro.setBounds(630, 370, 140, 40);
+        btnSalir.setText("Cerrar Sesión");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSalir);
+        btnSalir.setBounds(740, 40, 110, 40);
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo_adm.jpg"))); // NOI18N
         fondo.setText("jLabel1");
@@ -79,6 +84,12 @@ public class vista_admin extends javax.swing.JFrame {
         ae.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnAdmEmpleadoActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        vista_principal vp= new vista_principal();
+        vp.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,7 +129,7 @@ public class vista_admin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdmCasa;
     private javax.swing.JButton btnAdmEmpleado;
-    private javax.swing.JButton btnAdmRegistro;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JLabel fondo;
     // End of variables declaration//GEN-END:variables
 }

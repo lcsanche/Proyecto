@@ -36,6 +36,7 @@ public class vista_ver_cliente extends javax.swing.JFrame {
         lbClientes = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
+        btnAtras = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
 
@@ -55,7 +56,7 @@ public class vista_ver_cliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnBuscar);
-        btnBuscar.setBounds(570, 80, 110, 30);
+        btnBuscar.setBounds(590, 80, 110, 30);
 
         txtID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,7 +64,7 @@ public class vista_ver_cliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtID);
-        txtID.setBounds(190, 100, 350, 30);
+        txtID.setBounds(190, 100, 370, 30);
 
         tbClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -77,11 +78,11 @@ public class vista_ver_cliente extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tbClientes);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(60, 140, 770, 360);
+        jScrollPane1.setBounds(30, 150, 670, 360);
 
         jButton1.setText("Ver Casas Prediseñadas");
         getContentPane().add(jButton1);
-        jButton1.setBounds(120, 510, 150, 40);
+        jButton1.setBounds(710, 370, 150, 40);
 
         lbClientes.setFont(new java.awt.Font("Tahoma", 1, 45)); // NOI18N
         lbClientes.setForeground(new java.awt.Color(204, 255, 255));
@@ -100,11 +101,20 @@ public class vista_ver_cliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtNombre);
-        txtNombre.setBounds(190, 60, 350, 30);
+        txtNombre.setBounds(190, 60, 370, 30);
+
+        btnAtras.setText("Atras");
+        btnAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtrasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnAtras);
+        btnAtras.setBounds(60, 523, 80, 30);
 
         jButton2.setText("Generar Reporte");
         getContentPane().add(jButton2);
-        jButton2.setBounds(590, 510, 150, 40);
+        jButton2.setBounds(710, 260, 150, 40);
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpg"))); // NOI18N
         getContentPane().add(fondo);
@@ -124,6 +134,10 @@ public class vista_ver_cliente extends javax.swing.JFrame {
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBuscarActionPerformed
+
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAtrasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -162,6 +176,7 @@ public class vista_ver_cliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAtras;
     private javax.swing.JButton btnBuscar;
     private javax.swing.JLabel fondo;
     private javax.swing.JButton jButton1;
