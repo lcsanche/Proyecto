@@ -51,6 +51,11 @@ public class vista_vendedor extends javax.swing.JFrame {
         cerrar.setBounds(730, 30, 130, 40);
 
         btnCliente.setText("Clientes");
+        btnCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClienteActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnCliente);
         btnCliente.setBounds(130, 380, 100, 40);
 
@@ -95,6 +100,12 @@ public class vista_vendedor extends javax.swing.JFrame {
     private void btnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnReporteActionPerformed
+
+    private void btnClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClienteActionPerformed
+        vista_ver_cliente vc= new vista_ver_cliente();
+        vc.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnClienteActionPerformed
 
     /**
      * @param args the command line arguments
