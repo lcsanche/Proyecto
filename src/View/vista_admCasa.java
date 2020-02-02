@@ -34,6 +34,7 @@ public class vista_admCasa extends javax.swing.JFrame {
         TbEmpleados = new javax.swing.JTable();
         btnEditarCasa = new javax.swing.JButton();
         btnEliminarCasa = new javax.swing.JButton();
+        btnAtras = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -79,6 +80,15 @@ public class vista_admCasa extends javax.swing.JFrame {
         getContentPane().add(btnEliminarCasa);
         btnEliminarCasa.setBounds(750, 340, 90, 40);
 
+        btnAtras.setText("Atras");
+        btnAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtrasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnAtras);
+        btnAtras.setBounds(30, 520, 80, 30);
+
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpg"))); // NOI18N
         getContentPane().add(fondo);
         fondo.setBounds(0, -150, 1050, 720);
@@ -89,6 +99,12 @@ public class vista_admCasa extends javax.swing.JFrame {
     private void btnEliminarCasaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarCasaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEliminarCasaActionPerformed
+
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        vista_admin a= new vista_admin();
+        a.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnAtrasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,6 +146,7 @@ public class vista_admCasa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable TbEmpleados;
+    private javax.swing.JButton btnAtras;
     private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnEditarCasa;
     private javax.swing.JButton btnEliminarCasa;

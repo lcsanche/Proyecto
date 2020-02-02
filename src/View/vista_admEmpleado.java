@@ -36,6 +36,7 @@ public class vista_admEmpleado extends javax.swing.JFrame {
         TbEmpleados = new javax.swing.JTable();
         btnEditarEmpleado = new javax.swing.JButton();
         btnEliminarEmpleado = new javax.swing.JButton();
+        btnAtras = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -75,7 +76,7 @@ public class vista_admEmpleado extends javax.swing.JFrame {
         jScrollPane1.setViewportView(TbEmpleados);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(90, 120, 630, 402);
+        jScrollPane1.setBounds(60, 120, 660, 380);
 
         btnEditarEmpleado.setText("Editar");
         getContentPane().add(btnEditarEmpleado);
@@ -90,6 +91,15 @@ public class vista_admEmpleado extends javax.swing.JFrame {
         getContentPane().add(btnEliminarEmpleado);
         btnEliminarEmpleado.setBounds(750, 360, 90, 40);
 
+        btnAtras.setText("Atras");
+        btnAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtrasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnAtras);
+        btnAtras.setBounds(40, 510, 80, 30);
+
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpg"))); // NOI18N
         getContentPane().add(fondo);
         fondo.setBounds(0, -150, 1050, 720);
@@ -100,6 +110,12 @@ public class vista_admEmpleado extends javax.swing.JFrame {
     private void btnEliminarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarEmpleadoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEliminarEmpleadoActionPerformed
+
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        vista_admin a = new vista_admin();
+        a.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnAtrasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,6 +154,7 @@ public class vista_admEmpleado extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable TbEmpleados;
+    private javax.swing.JButton btnAtras;
     private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnEditarEmpleado;
     private javax.swing.JButton btnEliminarEmpleado;

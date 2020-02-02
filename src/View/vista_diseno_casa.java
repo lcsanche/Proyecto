@@ -28,6 +28,7 @@ public class vista_diseno_casa extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
+        btnAtras = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -145,6 +146,11 @@ public class vista_diseno_casa extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(70, 100, 2, 2);
 
+        btnAtras.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
+        btnAtras.setText("Atras");
+        getContentPane().add(btnAtras);
+        btnAtras.setBounds(30, 500, 90, 40);
+
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpg"))); // NOI18N
         getContentPane().add(jLabel10);
         jLabel10.setBounds(0, -60, 930, 670);
@@ -249,6 +255,7 @@ public class vista_diseno_casa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAtras;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
