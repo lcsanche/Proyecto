@@ -28,7 +28,10 @@ public class vista_vendedor extends javax.swing.JFrame {
     private void initComponents() {
 
         cerrar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        btnCliente = new javax.swing.JButton();
+        btnDisenar = new javax.swing.JButton();
+        btnReporte = new javax.swing.JButton();
+        fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(100, 300));
@@ -47,10 +50,32 @@ public class vista_vendedor extends javax.swing.JFrame {
         getContentPane().add(cerrar);
         cerrar.setBounds(730, 30, 130, 40);
 
-        jLabel1.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registro_1.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(-70, -150, 980, 720);
+        btnCliente.setText("Clientes");
+        getContentPane().add(btnCliente);
+        btnCliente.setBounds(130, 380, 100, 40);
+
+        btnDisenar.setText("Diseñar");
+        btnDisenar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDisenarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnDisenar);
+        btnDisenar.setBounds(420, 380, 100, 40);
+
+        btnReporte.setText("Reporte");
+        btnReporte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReporteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnReporte);
+        btnReporte.setBounds(690, 380, 100, 40);
+
+        fondo.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondovendedor.png"))); // NOI18N
+        getContentPane().add(fondo);
+        fondo.setBounds(-10, -110, 980, 720);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -60,6 +85,16 @@ public class vista_vendedor extends javax.swing.JFrame {
         vp.setVisible(true);
         dispose();
     }//GEN-LAST:event_cerrarActionPerformed
+
+    private void btnDisenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisenarActionPerformed
+        vista_diseno_casa vd= new vista_diseno_casa();
+        vd.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnDisenarActionPerformed
+
+    private void btnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnReporteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -97,7 +132,10 @@ public class vista_vendedor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCliente;
+    private javax.swing.JButton btnDisenar;
+    private javax.swing.JButton btnReporte;
     private javax.swing.JButton cerrar;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel fondo;
     // End of variables declaration//GEN-END:variables
 }

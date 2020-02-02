@@ -201,7 +201,9 @@ public class vista_login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Inicio de Sesion Exitoso");
             //Agregar vista del admin
         }else if ("Vendedor".equals(LoginEmpleado(user, password))){
-            //agregar vista del vendedor
+             vista_vendedor v= new vista_vendedor();
+             v.setVisible(true);
+             dispose();
         }else{
             JOptionPane.showMessageDialog(null, "El nombre de usuario y/o contrasenia no son validos.");
         }    
