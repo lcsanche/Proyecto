@@ -7,7 +7,7 @@ package builder;
 
 import creacional.Casa;
 /**
- *
+ *definirNumPisos
  * @author Hp
  */
 public abstract class CasaBuilder {
@@ -16,12 +16,12 @@ public abstract class CasaBuilder {
     public Casa getCasa(){
         return casa;
     }
-    public abstract void definir_m2();
-    public abstract void definir_numPisos();
-    public abstract void indicar_esEsquinera();
-    public abstract void indicar_orientacion();
-    public abstract void indicar_tamanioPatio();
-    public abstract void definir_numHab();
-    public abstract void definir_numBanos();
+    public abstract void definirMetros2();
+    public abstract void definirNumPisos();
+    public abstract void EsEsquinera();
+    public abstract void Orientacion();
+    public abstract void tamanioPatio();
+    public abstract void definirNumHab();
+    public abstract void definirNumBanos();
     
 }

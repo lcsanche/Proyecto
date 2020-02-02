@@ -12,37 +12,37 @@ package builder;
 public class CasaCieloBuilder extends CasaBuilder{
 
     @Override
-    public void definir_m2() {
+    public void definirMetros2() {
         casa.setM2(150);
     }
 
     @Override
-    public void definir_numPisos() { 
+    public void definirNumPisos() { 
         casa.setNumPisos(2);
     }
 
     @Override
-    public void indicar_esEsquinera() {
+    public void EsEsquinera() {
         casa.setEsEsquinera(true);
     }
 
     @Override
-    public void indicar_orientacion() {
+    public void Orientacion() {
         casa.setOrientacion("Norte");
     }
 
     @Override
-    public void indicar_tamanioPatio() {
+    public void tamanioPatio() {
         casa.setPatio("Grande");
     }
 
     @Override
-    public void definir_numHab() {
+    public void definirNumHab() {
         casa.setNumHabitaciones(4);
     }
 
     @Override
-    public void definir_numBanos() {
+    public void definirNumBanos() {
         casa.setNumBanos(3);
     }
     

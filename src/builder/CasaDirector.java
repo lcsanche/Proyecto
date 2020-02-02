@@ -18,13 +18,13 @@ public class CasaDirector {
         this.builder = builder;
     }
     public void construirCasa() {
-        builder.definir_m2();
-        builder.definir_numPisos();
-        builder.indicar_esEsquinera();
-        builder.indicar_orientacion();
-        builder.indicar_tamanioPatio();
-        builder.definir_numHab();
-        builder.definir_numBanos();
+        builder.definirMetros2();
+        builder.definirNumPisos();
+        builder.EsEsquinera();
+        builder.Orientacion();
+        builder.tamanioPatio();
+        builder.definirNumHab();
+        builder.definirNumBanos();
     }
     public void changeBuilder(CasaBuilder ab){
         this.builder=ab;
