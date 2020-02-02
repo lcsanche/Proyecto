@@ -11,7 +11,6 @@ package Decorator;
  */
 public class pisoPorcelanato implements Acabado{
 
-    @Override
     public void anadirDecoracion() {
         this.anadirDecoracion();
     }

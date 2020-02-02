@@ -11,7 +11,6 @@ package Decorator;
  */
 public class IluminacionLed implements Acabado{
 
-    @Override
     public void anadirDecoracion() {
         this.anadirDecoracion();
     }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Decorator;
+package decorator;
 
 import creacional.Casa;
 
@@ -12,8 +12,8 @@ import creacional.Casa;
  * @author DELL
  */
 public class AddAcabadoDecorador extends AcabadoDecorator {
-    public Casa casa;
-    public float precio;
+    public static Casa casa;
+    public static float precio;
     
     public AddAcabadoDecorador(Acabado decoratedAcabado) {
         super(decoratedAcabado);

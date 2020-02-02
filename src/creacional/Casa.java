@@ -5,24 +5,24 @@
  */
 package creacional;
 
-import Decorator.Acabado;
-import Singleton.Conexion;
+import decorator.Acabado;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  *
  * @author Karina Ortega - Luis Sánchez - Jocelyn Chicaiza
  */
 public class Casa {
-     public int m2;
-     public int numPisos;
-     public boolean esEsquinera;
-     public String orientacion;
-     public String patio;
-     public int numHabitaciones;
-     public int numBanos;
-     public LinkedList<Acabado> acabados;
-     public float precio;
+     private int m2;
+     private int numPisos;
+     private boolean esEsquinera;
+     private String orientacion;
+     private String patio;
+     private int numHabitaciones;
+     private int numBanos;
+     private List<Acabado> acabados;
+     private float precio;
      
      public Casa(){this.acabados = new LinkedList<>();
 }
@@ -95,14 +95,14 @@ public class Casa {
     }
 
     public LinkedList<Acabado> getAcabados() {
-        return acabados;
+        return (LinkedList<Acabado>) acabados;
     }
 
     public float getPrecio() {
         return precio;
     }
 
-    public void setAcabados(LinkedList<Acabado> acabados) {
+    public void setAcabados(List<Acabado> acabados) {
         this.acabados = acabados;
     }
 

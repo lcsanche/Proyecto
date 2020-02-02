@@ -18,8 +18,8 @@ public abstract class CasaBuilder {
     }
     public abstract void definirMetros2();
     public abstract void definirNumPisos();
-    public abstract void EsEsquinera();
-    public abstract void Orientacion();
+    public abstract void esEsquinera();
+    public abstract void orientacion();
     public abstract void tamanioPatio();
     public abstract void definirNumHab();
     public abstract void definirNumBanos();

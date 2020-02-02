@@ -14,7 +14,7 @@ public class Usuario {
     private static Usuario Instancia;
     
     private Usuario() {
-        this.user = user;
+        
     }
     
     public static Usuario getInstancia(){

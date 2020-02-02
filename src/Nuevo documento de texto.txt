@@ -1,0 +1,21 @@
+
+sonar.host.url=http://200.9.176.59:9000
+
+#debe ser con su usario de Sonar
+sonar.projectKey=ED-2-2S-2019-2:korteg2019
+#nombre Taller
+sonar.projectName=CodigoHuffman
+
+sonar.projectVersion=1.0
+
+#Tiene que ir la direccion a la carpeta src del programa.debe usar "/"
+sonar.sources=C:/Users/Yiam/Downloads/CodigosDeHuffman/src
+
+sonar.java.binaries=C:/Users/Yiam/Downloads/CodigosDeHuffman/build
+
+#el archivo debe ser de tipo .properties
+#su usuario
+sonar.login=korteg2019
+#su contraseña
+sonar.password=200223949
+

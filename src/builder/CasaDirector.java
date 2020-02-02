@@ -20,8 +20,8 @@ public class CasaDirector {
     public void construirCasa() {
         builder.definirMetros2();
         builder.definirNumPisos();
-        builder.EsEsquinera();
-        builder.Orientacion();
+        builder.esEsquinera();
+        builder.orientacion();
         builder.tamanioPatio();
         builder.definirNumHab();
         builder.definirNumBanos();

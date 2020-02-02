@@ -11,15 +11,15 @@ package Singleton;
  */
 public class Administrador{
     
-    public void AgregarEmpleado(){
+    public void agregarEmpleado(){
         //Definir el Metodo
     }
     
-    public void EliminarEmpleado(){
+    public void eliminarEmpleado(){
         //Definir el Metodo
     }
     
-    public void AgregarNuevaCasaPre(){
+    public void agregarNuevaCasaPre(){
         //Definir el Metodo
     }
 }

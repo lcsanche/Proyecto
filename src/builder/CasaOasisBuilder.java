@@ -22,12 +22,12 @@ public class CasaOasisBuilder extends CasaBuilder{
     }
 
     @Override
-    public void EsEsquinera() {
+    public void esEsquinera() {
         casa.setEsEsquinera(false);
     }
 
     @Override
-    public void Orientacion() {
+    public void orientacion() {
         casa.setOrientacion("Sur");
     }
 
