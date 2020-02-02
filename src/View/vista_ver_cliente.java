@@ -36,6 +36,7 @@ public class vista_ver_cliente extends javax.swing.JFrame {
         lbClientes = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -75,7 +76,7 @@ public class vista_ver_cliente extends javax.swing.JFrame {
 
         jButton1.setText("Ver Casas Prediseñadas");
         getContentPane().add(jButton1);
-        jButton1.setBounds(350, 510, 150, 40);
+        jButton1.setBounds(120, 510, 150, 40);
 
         lbClientes.setFont(new java.awt.Font("Tahoma", 1, 45)); // NOI18N
         lbClientes.setForeground(new java.awt.Color(204, 255, 255));
@@ -95,6 +96,10 @@ public class vista_ver_cliente extends javax.swing.JFrame {
         });
         getContentPane().add(txtNombre);
         txtNombre.setBounds(190, 60, 350, 30);
+
+        jButton2.setText("Generar Reporte");
+        getContentPane().add(jButton2);
+        jButton2.setBounds(590, 510, 150, 40);
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpg"))); // NOI18N
         getContentPane().add(fondo);
@@ -151,6 +156,7 @@ public class vista_ver_cliente extends javax.swing.JFrame {
     private javax.swing.JButton btnBuscar;
     private javax.swing.JLabel fondo;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
