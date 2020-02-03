@@ -5,7 +5,7 @@
  */
 package View;
 
-import Model.Clientes;
+
 import Singleton.Conexion;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;

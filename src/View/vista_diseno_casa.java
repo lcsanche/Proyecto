@@ -1,7 +1,7 @@
 
 package View;
 
-import Model.Usuario;
+import Model.Users;
 
 public class vista_diseno_casa extends javax.swing.JFrame {
 
@@ -228,7 +228,7 @@ public class vista_diseno_casa extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
-        Usuario user = new Usuario();
+        Users user = new Users();
         if (user.getCargo()=="Null"){
             vista_principal dc = new vista_principal();
             dc.setVisible(true);
