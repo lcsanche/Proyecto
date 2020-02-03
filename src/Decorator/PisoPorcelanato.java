@@ -9,7 +9,7 @@ package Decorator;
  *
  * @author DELL
  */
-public class pisoPorcelanato implements Acabado{
+public class PisoPorcelanato implements Acabado{
 
     @Override
     public void anadirDecoracion() {

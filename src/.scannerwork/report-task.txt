@@ -1,0 +1,6 @@
+projectKey=COS:grupo4
+serverUrl=http://200.126.12.164
+serverVersion=6.7.6.38781
+dashboardUrl=http://200.126.12.164/dashboard/index/COS:grupo4
+ceTaskId=AXAJIiaDn2b0NoJj1O-Q
+ceTaskUrl=http://200.126.12.164/api/ce/task?id=AXAJIiaDn2b0NoJj1O-Q
