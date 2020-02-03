@@ -51,6 +51,10 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
         jTextField9 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         btnAtras = new javax.swing.JButton();
+        txtUsuario = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        psContrasena = new javax.swing.JPasswordField();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -73,7 +77,7 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel2.setText("Estado Civil:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(440, 230, 130, 27);
+        jLabel2.setBounds(460, 230, 130, 27);
 
         Apellido.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         Apellido.setText("Apellidos:");
@@ -93,12 +97,12 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel6.setText("Dir. Domicilio:");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(440, 180, 150, 30);
+        jLabel6.setBounds(450, 180, 150, 30);
 
         jLabel7.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel7.setText("Telf. Trabajo:");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(440, 130, 140, 27);
+        jLabel7.setBounds(450, 140, 140, 27);
 
         jLabel8.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel8.setText("Celular:");
@@ -108,7 +112,7 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel9.setText("Cargo:");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(440, 280, 66, 27);
+        jLabel9.setBounds(30, 380, 66, 27);
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,7 +136,7 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
         getContentPane().add(jTextField8);
         jTextField8.setBounds(590, 230, 280, 30);
         getContentPane().add(jTextField9);
-        jTextField9.setBounds(590, 280, 280, 30);
+        jTextField9.setBounds(150, 380, 270, 30);
 
         jButton1.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
         jButton1.setText("Registrar");
@@ -148,6 +152,20 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
         });
         getContentPane().add(btnAtras);
         btnAtras.setBounds(100, 450, 130, 40);
+        getContentPane().add(txtUsuario);
+        txtUsuario.setBounds(590, 280, 280, 30);
+
+        jLabel3.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel3.setText("Usuario:");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(460, 280, 90, 30);
+
+        jLabel10.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel10.setText("Contraseña:");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(460, 340, 120, 30);
+        getContentPane().add(psContrasena);
+        psContrasena.setBounds(590, 340, 280, 30);
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registro_1.jpg"))); // NOI18N
         getContentPane().add(fondo);
@@ -166,11 +184,11 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
         String Direccion = jTextField7.getText();
         String EstadoCivil = jTextField8.getText();
         String Cargo = jTextField9.getText();
-        /*String user = jTextField.getText();
-        String password = new String(jPasswordField1.getPassword());
+        String user = txtUsuario.getText();
+        String password = new String(psContrasena.getPassword());
         if (nombre.length() > 0 && apellido.length() > 0 && cedula.length() > 0 && celular.length() > 0 && Direccion.length() > 0 && correo.length() > 0 && Cargo.length() > 0 
         && TelfTra.length() > 0 && EstadoCivil.length() > 0 &&user.length() > 0 && password.length() > 0 ){
-            if(RegistrarEmpleado(IdEmpleado,Contraseña,Nombre,Apellido,Cedula,Celular,Correo,Direccion,telTrabajo,EstadoCivil,Cargo)){
+            if(RegistrarEmpleado(user,password,nombre,apellido,cedula,celular,correo,Direccion,TelfTra,EstadoCivil,Cargo)){
                 JOptionPane.showMessageDialog(null, "Registro Exitoso");
                 vista_login vlog= new vista_login();
                 vlog.setVisible(true);
@@ -180,7 +198,7 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
             }
         }else{
             JOptionPane.showMessageDialog(null, "Los Campos son Obligatorios");
-        } */
+        } 
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
@@ -231,7 +249,9 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
     private javax.swing.JLabel fondo;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -247,6 +267,8 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JPasswordField psContrasena;
+    private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 
     public boolean RegistrarEmpleado(String user, String password,String nombre,String apellido,String cedula,String Celular, String correo, String Direccion, String TelfTra, String EstadoCivil, String Cargo){

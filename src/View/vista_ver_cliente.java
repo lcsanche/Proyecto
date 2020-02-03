@@ -67,15 +67,6 @@ public class vista_ver_cliente extends javax.swing.JFrame {
         getContentPane().add(txtID);
         txtID.setBounds(190, 100, 370, 30);
 
-        tbClientes.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-
-            }
-
-        ));
         jScrollPane1.setViewportView(tbClientes);
 
         getContentPane().add(jScrollPane1);

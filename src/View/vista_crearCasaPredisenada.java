@@ -6,6 +6,7 @@
 package View;
 
 import Singleton.Conexion;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -48,6 +49,7 @@ public class vista_crearCasaPredisenada extends javax.swing.JFrame {
         txtPatio = new javax.swing.JTextField();
         txtEsquinera = new javax.swing.JTextField();
         btnAtras = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -92,7 +94,7 @@ public class vista_crearCasaPredisenada extends javax.swing.JFrame {
 
         jLabel8.setText("jLabel8");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(840, 330, 41, 16);
+        jLabel8.setBounds(840, 330, 34, 14);
 
         jLabel9.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel9.setText("Numero de baños:");
@@ -127,7 +129,16 @@ public class vista_crearCasaPredisenada extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnAtras);
-        btnAtras.setBounds(50, 510, 63, 30);
+        btnAtras.setBounds(50, 500, 70, 30);
+
+        btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnGuardar);
+        btnGuardar.setBounds(770, 490, 71, 30);
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registro_1.jpg"))); // NOI18N
         fondo.setMaximumSize(new java.awt.Dimension(900, 600));
@@ -144,6 +155,30 @@ public class vista_crearCasaPredisenada extends javax.swing.JFrame {
         a.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        
+        String Nombre = txtNombre.getText();
+        String Metros2 = txtM2.getText();
+        String nPisos =  txtNpisos.getText();
+        String Esquinera = txtEsquinera.getText();
+        String Orientacion = txtOrientacion.getText();
+        String TPatio = txtPatio.getText();
+        String nHabitaciones = txtNHabitaciones.getText();
+        String nBaños = txtNbanios.getText();
+        if (Nombre.length() > 0 && Metros2.length() > 0 && nPisos.length() > 0 && Esquinera.length() > 0 && Orientacion.length() > 0 && TPatio.length() > 0 && nHabitaciones.length() > 0 && nBaños.length() > 0 ){
+            if(AgregarCasaPre(Nombre,Metros2,nPisos,Esquinera,Orientacion,TPatio,nHabitaciones,nBaños)){
+                JOptionPane.showMessageDialog(null, "Registro Exitoso");
+                vista_login vlog= new vista_login();
+                vlog.setVisible(true);
+                dispose();
+            }else{
+                JOptionPane.showMessageDialog(null, "La Casa ya se encuentra registrada");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Los Campos son Obligatorios");
+        }
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -182,6 +217,7 @@ public class vista_crearCasaPredisenada extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAtras;
+    private javax.swing.JButton btnGuardar;
     private javax.swing.JLabel fondo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -216,27 +252,7 @@ public class vista_crearCasaPredisenada extends javax.swing.JFrame {
         }
         return false;
         
-        /*
-        String Nombre = txtNombre.getText();
-        String Metros2 = txtM2.getText();
-        String nPisos =  txtNpisos.getText();
-        String Esquinera = txtEsquinera.getText();
-        String Orientacion = txtOrientacion.getText();
-        String TPatio = txtPatio.getText();
-        String nHabitaciones = txtNHabitaciones.getText();
-        String nBaños = txtNbanios.getText();
-        if (Nombre.length() > 0 && Metros2.length() > 0 && nPisos.length() > 0 && Esquinera.length() > 0 && Orientacion.length() > 0 && TPatio.length() > 0 && nHabitaciones.length() > 0 && nBaños.length() > 0 ){
-            if(AgregarCasaPre(Nombre,Metros2,nPisos,Esquinera,Orientacion,TPatio,nHabitaciones,nBaños)){
-                JOptionPane.showMessageDialog(null, "Registro Exitoso");
-                vista_login vlog= new vista_login();
-                vlog.setVisible(true);
-                dispose();
-            }else{
-                JOptionPane.showMessageDialog(null, "La Casa ya se encuentra registrada");
-            }
-        }else{
-            JOptionPane.showMessageDialog(null, "Los Campos son Obligatorios");
-        } */
+        
     }
 
 }
