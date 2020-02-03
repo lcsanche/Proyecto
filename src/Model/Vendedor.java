@@ -17,19 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class Vendedor{
     
-    public boolean GuardarCasaDiseñada(String user, String Nombre, int m2, int numPisos, boolean esEsquinera, String orientacion, String patio, int numHabitaciones, int numBanos){
-        Conexion conexion = Conexion.getInstancia();
-        try{
-            String SQL1 = "SELECT * FROM CasasDiseñadas WHERE IdCliente = '"+user+"' and Metros2 = '"+m2+"' and nPisos = '"+numPisos+"' and Esquinera = '"+esEsquinera+"' and Orientacion = '"+orientacion+"' and TPatio = '"+patio+"' and nHabitaciones = '"+numHabitaciones+"' and nBaños = '"+numBanos+"'";
-            String SQL2 = "INSERT INTO CasasDiseñadas(IdCliente,Nombre,Metros2,nPisos,Esquinera,Orientacion,TPatio,nHabitaciones,nBaños) VALUES ('"+user+"','"+Nombre+"','"+m2+"','"+numPisos+"',"+esEsquinera+",'"+orientacion+",'"+patio+",'"+numHabitaciones+",'"+numBanos+"')";
-            if(conexion.Actualizar(SQL1, SQL2)){
-                return true;
-            }else{return false;}
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
+    
     
     public void RevisarDatosCliente(String user){
         Conexion conexion = Conexion.getInstancia();

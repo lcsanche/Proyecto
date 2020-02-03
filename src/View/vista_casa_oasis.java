@@ -5,7 +5,10 @@
  */
 package View;
 
+import Model.Users;
+import Singleton.Conexion;
 import View.vista_diseno_casa;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -210,7 +213,13 @@ public class vista_casa_oasis extends javax.swing.JFrame {
     }//GEN-LAST:event_bAtrasActionPerformed
 
     private void bGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarActionPerformed
-        // TODO add your handling code here:
+        String Tporce = (String) cbPiso1.getSelectedItem();
+        String TGrife = (String) cbGriferia.getSelectedItem();
+        String Tluz = (String) cbIluminacion.getSelectedItem();
+        String TBaño = (String) cbBanio.getSelectedItem();
+        String Ttecho = (String) cbTecho.getSelectedItem();
+        Users user = new Users();
+        user.GuardarCasaDiseñada(user.getUser(),"Oasis","90","1","No","Sur","Pequeño","2","2",Tporce,TGrife,Tluz,TBaño,Ttecho); 
     }//GEN-LAST:event_bGuardarActionPerformed
      
     
