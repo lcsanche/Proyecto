@@ -10,17 +10,19 @@ package Singleton;
  * @author lcsan
  */
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Conexion {
-    private final String database = "MyHomeDB";
-    private final String hostname = "192.168.99.100";
-    private final String port = "33061";
-    private final String url = "jdbc:mysql://" + hostname + ":" + port + "/" + database;
-    private final String username = "root";
-    private final String password = "root";
-    private static Conexion Instancia;
+    protected final String database = "MyHomeDB";
+    protected final String hostname = "192.168.99.100";
+    protected final String port = "33061";
+    protected final String url = "jdbc:mysql://" + hostname + ":" + port + "/" + database;
+    protected final String username = "root";
+    protected final String password = "root";
+    protected static Conexion Instancia;
 
-    private Conexion(){};
+    protected Conexion(){};
     
     public static Conexion getInstancia(){
         if(Instancia==null){
@@ -31,24 +33,20 @@ public class Conexion {
     
     public Connection ConexionDB() {
         Connection con = null;
-        try {
+        try{
             con = DriverManager.getConnection(url, username, password);
-            System.out.println("La Conexión ha sido Exitosa");
-        } catch (SQLException e) {
-            System.out.println("No se ha podido realizar la Conexión");
-            System.out.println("Error: "+e.getMessage());
+            System.err.println("La Conexion ha sido Exitosa");
+        } catch (SQLException ex) {
+            System.err.println("No se ha podido realizar la Conexion");
+            System.err.println("Error: "+ex.getMessage());
         }
         return con;
     }
     
-    public ResultSet consultar(String sql) {
+    public ResultSet consultar(String sql) throws SQLException {
         ResultSet resultado;
-        try {
-            Statement sentencia = DriverManager.getConnection(url, username, password).createStatement();
-            resultado = sentencia.executeQuery(sql);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return null;
+        try(Statement sentencia = DriverManager.getConnection(url, username, password).createStatement()) {
+           resultado = sentencia.executeQuery(sql);
         }
         return resultado;
     }
