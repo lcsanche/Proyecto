@@ -32,7 +32,7 @@ public class Vendedorr{
             ResultSet rs = conexion.consultar("SELECT Nombre,Apellido,Cedula,Correo FROM Cliente WHERE IdCliente = '" + user + "'" );
             rs.last();
             if (rs.getRow() > 0){
-                Clientee Cliente = new Clientee(rs.getString("Nombre"),rs.getString("Apellido"),rs.getInt("Cedula"),rs.getString("Correo"));
+                Clientes Cliente = new Clientes(rs.getString("Nombre"),rs.getString("Apellido"),rs.getInt("Cedula"),rs.getString("Correo"));
                 JOptionPane.showMessageDialog(null, "Datos encontrados\n"+"Nombre: "+rs.getString("Nombre")+" "
                 +rs.getString("Apellido")+"\n"+"Nro. Cedula: "+rs.getInt("Cedula")+" Correo: "+rs.getString("Correo"));
             }
