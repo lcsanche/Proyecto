@@ -108,7 +108,7 @@ public class vista_principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       vista_diseno_casa dc = new vista_diseno_casa();
+        vista_diseno_casa dc = new vista_diseno_casa();
         dc.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed

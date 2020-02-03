@@ -127,11 +127,7 @@ public class vista_admCasa extends javax.swing.JFrame {
             }
         }else{
             JOptionPane.showMessageDialog(null, "Los Campos son Obligatorios");
-        }
-        
-        
-        
-        
+        }   
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     /**

@@ -203,9 +203,9 @@ public class vista_login extends javax.swing.JFrame {
             dispose();
         }else if ("Vendedor".equals(LoginEmpleado(user, password))){
             JOptionPane.showMessageDialog(null, "Inicio de Sesion Exitoso");
-             vista_vendedor v= new vista_vendedor();
-             v.setVisible(true);
-             dispose();
+            vista_vendedor v= new vista_vendedor();
+            v.setVisible(true);
+            dispose();
         }else{
             JOptionPane.showMessageDialog(null, "El nombre de usuario y/o contrasenia no son validos.");
         }    
@@ -217,7 +217,7 @@ public class vista_login extends javax.swing.JFrame {
             ResultSet resultado = conexion.consultar("SELECT IdCliente FROM Cliente WHERE IdCliente = '" + user + "' and Contraseña = '" + password + "'" );
             resultado.last();
             if (resultado.getRow() > 0){
-                usuarioactual = new Usuario(user);
+                usuarioactual = new Usuario(user,"Null");
                 return true;
             }
         }catch (Exception e) {
@@ -232,7 +232,7 @@ public class vista_login extends javax.swing.JFrame {
             ResultSet resultado = conexion.consultar("SELECT Cargo FROM Empleados WHERE IdEmpleado = '" + user + "' and Contraseña = '" + password + "'" );
             resultado.last();
             if (resultado.getRow() > 0){
-                usuarioactual = new Usuario(user);
+                usuarioactual = new Usuario(user,resultado.getString("Cargo"));
                 return resultado.getString("Cargo");
             }   
         }catch (Exception e) {

@@ -22,7 +22,7 @@ public class Conexion {
     protected final String password = "root";
     protected static Conexion Instancia;
 
-    protected Conexion(){};
+    private Conexion(){};
     
     public static Conexion getInstancia(){
         if(Instancia==null){
@@ -43,10 +43,13 @@ public class Conexion {
         return con;
     }
     
-    public ResultSet consultar(String sql) throws SQLException {
-        ResultSet resultado;
-        try(Statement sentencia = DriverManager.getConnection(url, username, password).createStatement()) {
-           resultado = sentencia.executeQuery(sql);
+    public ResultSet consultar(String sql){
+        ResultSet resultado = null;
+       try {
+            Statement sentencia = DriverManager.getConnection(url, username, password).createStatement();
+            resultado = sentencia.executeQuery(sql);
+        } catch (SQLException ex) {
+            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
         }
         return resultado;
     }

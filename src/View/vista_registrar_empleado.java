@@ -140,6 +140,11 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
         jButton1.setText("Registrar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(670, 450, 130, 40);
 
@@ -175,6 +180,16 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        vista_admin a = new vista_admin();
+        a.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnAtrasActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String nombre = jTextField1.getText();
         String apellido = jTextField2.getText();
         String cedula =  jTextField3.getText();
@@ -190,22 +205,13 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
         && TelfTra.length() > 0 && EstadoCivil.length() > 0 &&user.length() > 0 && password.length() > 0 ){
             if(RegistrarEmpleado(user,password,nombre,apellido,cedula,celular,correo,Direccion,TelfTra,EstadoCivil,Cargo)){
                 JOptionPane.showMessageDialog(null, "Registro Exitoso");
-                vista_login vlog= new vista_login();
-                vlog.setVisible(true);
-                dispose();
             }else{
                 JOptionPane.showMessageDialog(null, "El Usuario ya se encuentra registrado");
             }
         }else{
             JOptionPane.showMessageDialog(null, "Los Campos son Obligatorios");
-        } 
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
-        vista_admin a = new vista_admin();
-        a.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_btnAtrasActionPerformed
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -274,7 +280,7 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
     public boolean RegistrarEmpleado(String user, String password,String nombre,String apellido,String cedula,String Celular, String correo, String Direccion, String TelfTra, String EstadoCivil, String Cargo){
         Conexion conexion = Conexion.getInstancia();
         try{
-            String SQL1 = "SELECT * FROM Empleados WHERE IdCliente = '"+user+"'";
+            String SQL1 = "SELECT * FROM Empleados WHERE IdEmpleado = '"+user+"'";
             String SQL2 = "INSERT Empleados(IdEmpleado,Contraseña,Nombre,Apellido,Cedula,Celular,Correo,Direccion,telTrabajo,EstadoCivil,Cargo) VALUES ('"+user+"','"+password+"','"+nombre+"','"+apellido+"','"+cedula+"','"+Celular+"','"+correo+"','"+Direccion+"','"+TelfTra+"','"+EstadoCivil+"','"+Cargo+"')";
             if(conexion.Actualizar(SQL1, SQL2)){
                 return true;

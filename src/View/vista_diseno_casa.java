@@ -1,6 +1,8 @@
 
 package View;
 
+import Model.Usuario;
+
 public class vista_diseno_casa extends javax.swing.JFrame {
 
     
@@ -34,9 +36,7 @@ public class vista_diseno_casa extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setLocation(new java.awt.Point(300, 100));
-        setMaximumSize(new java.awt.Dimension(900, 600));
         setMinimumSize(new java.awt.Dimension(900, 600));
-        setPreferredSize(new java.awt.Dimension(900, 600));
         getContentPane().setLayout(null);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/casa cielo.png"))); // NOI18N
@@ -148,6 +148,11 @@ public class vista_diseno_casa extends javax.swing.JFrame {
 
         btnAtras.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
         btnAtras.setText("Atras");
+        btnAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtrasActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnAtras);
         btnAtras.setBounds(30, 500, 90, 40);
 
@@ -221,6 +226,20 @@ public class vista_diseno_casa extends javax.swing.JFrame {
            visible3=false;
         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        Usuario user = new Usuario();
+        if (user.getCargo()=="Null"){
+            vista_principal dc = new vista_principal();
+            dc.setVisible(true);
+            dispose();
+        }else{
+            vista_vendedor v= new vista_vendedor();
+            v.setVisible(true);
+            dispose();
+        }
+        
+    }//GEN-LAST:event_btnAtrasActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

@@ -169,9 +169,6 @@ public class vista_crearCasaPredisenada extends javax.swing.JFrame {
         if (Nombre.length() > 0 && Metros2.length() > 0 && nPisos.length() > 0 && Esquinera.length() > 0 && Orientacion.length() > 0 && TPatio.length() > 0 && nHabitaciones.length() > 0 && nBaños.length() > 0 ){
             if(AgregarCasaPre(Nombre,Metros2,nPisos,Esquinera,Orientacion,TPatio,nHabitaciones,nBaños)){
                 JOptionPane.showMessageDialog(null, "Registro Exitoso");
-                vista_login vlog= new vista_login();
-                vlog.setVisible(true);
-                dispose();
             }else{
                 JOptionPane.showMessageDialog(null, "La Casa ya se encuentra registrada");
             }
