@@ -11,7 +11,7 @@ package Model;
  */
 public class Users {
     private String User;
-    private String Cargo;
+    static String Cargo;
 
     public Users() {
         this.User = User;
