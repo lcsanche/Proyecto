@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package Model;
 
 /**
  *
- * @author PC-4
+ * @author lcsan
  */
-public class Clientee {
+public class Clientes {
     private String Nombre;
     private String Apellido;
     private int Cedula;
     private String Correo;
 
-    public Clientee(String Nombre, String Apellido, int Cedula, String Correo) {
+    public Clientes(String Nombre, String Apellido, int Cedula, String Correo) {
         this.Nombre = Nombre;
         this.Apellido = Apellido;
         this.Cedula = Cedula;
@@ -56,4 +56,3 @@ public class Clientee {
     
     
 }
-

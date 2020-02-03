@@ -5,6 +5,8 @@
  */
 package View;
 
+import Singleton.Conexion;
+
 /**
  *
  * @author PC-4
@@ -50,9 +52,7 @@ public class vista_crearCasaPredisenada extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(300, 100));
-        setMaximumSize(new java.awt.Dimension(900, 600));
         setMinimumSize(new java.awt.Dimension(900, 600));
-        setPreferredSize(new java.awt.Dimension(900, 600));
         getContentPane().setLayout(null);
 
         lbTitulo.setFont(new java.awt.Font("Tw Cen MT", 2, 48)); // NOI18N
@@ -92,7 +92,7 @@ public class vista_crearCasaPredisenada extends javax.swing.JFrame {
 
         jLabel8.setText("jLabel8");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(840, 330, 34, 14);
+        jLabel8.setBounds(840, 330, 41, 16);
 
         jLabel9.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel9.setText("Numero de baños:");
@@ -127,7 +127,7 @@ public class vista_crearCasaPredisenada extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnAtras);
-        btnAtras.setBounds(50, 510, 59, 30);
+        btnAtras.setBounds(50, 510, 63, 30);
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registro_1.jpg"))); // NOI18N
         fondo.setMaximumSize(new java.awt.Dimension(900, 600));
@@ -202,4 +202,41 @@ public class vista_crearCasaPredisenada extends javax.swing.JFrame {
     private javax.swing.JTextField txtOrientacion;
     private javax.swing.JTextField txtPatio;
     // End of variables declaration//GEN-END:variables
+
+    public boolean AgregarCasaPre(String Nombre, String Metros2, String nPisos, String Esquinera, String Orientacion, String TPatio, String nHabitaciones, String nBaños){
+        Conexion conexion = Conexion.getInstancia();
+        try{
+            String SQL1 = "SELECT * FROM CasasPre WHERE Nombre = '"+Nombre+"'";
+            String SQL2 = "INSERT CasasPre(Nombre,Metros2,nPisos,Esquinera,Orientacion,TPatio,nHabitaciones,nBaños) VALUES ('"+Nombre+"','"+Metros2+"','"+nPisos+"','"+Esquinera+"','"+Orientacion+"','"+TPatio+"','"+nHabitaciones+"','"+nBaños+"')";
+            if(conexion.Actualizar(SQL1, SQL2)){
+                return true;
+            }else{return false;}
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+        
+        /*
+        String Nombre = txtNombre.getText();
+        String Metros2 = txtM2.getText();
+        String nPisos =  txtNpisos.getText();
+        String Esquinera = txtEsquinera.getText();
+        String Orientacion = txtOrientacion.getText();
+        String TPatio = txtPatio.getText();
+        String nHabitaciones = txtNHabitaciones.getText();
+        String nBaños = txtNbanios.getText();
+        if (Nombre.length() > 0 && Metros2.length() > 0 && nPisos.length() > 0 && Esquinera.length() > 0 && Orientacion.length() > 0 && TPatio.length() > 0 && nHabitaciones.length() > 0 && nBaños.length() > 0 ){
+            if(AgregarCasaPre(Nombre,Metros2,nPisos,Esquinera,Orientacion,TPatio,nHabitaciones,nBaños)){
+                JOptionPane.showMessageDialog(null, "Registro Exitoso");
+                vista_login vlog= new vista_login();
+                vlog.setVisible(true);
+                dispose();
+            }else{
+                JOptionPane.showMessageDialog(null, "La Casa ya se encuentra registrada");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Los Campos son Obligatorios");
+        } */
+    }
+
 }
