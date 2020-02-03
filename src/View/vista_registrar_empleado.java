@@ -5,7 +5,7 @@
  */
 package View;
 
-import Singleton.Conexion;
+import Model.Admin;
 import javax.swing.JOptionPane;
 
 /**
@@ -201,9 +201,10 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
         String Cargo = jTextField9.getText();
         String user = txtUsuario.getText();
         String password = new String(psContrasena.getPassword());
+         Admin Admin = new Admin();
         if (nombre.length() > 0 && apellido.length() > 0 && cedula.length() > 0 && celular.length() > 0 && Direccion.length() > 0 && correo.length() > 0 && Cargo.length() > 0 
         && TelfTra.length() > 0 && EstadoCivil.length() > 0 &&user.length() > 0 && password.length() > 0 ){
-            if(RegistrarEmpleado(user,password,nombre,apellido,cedula,celular,correo,Direccion,TelfTra,EstadoCivil,Cargo)){
+            if(Admin.RegistrarEmpleado(user,password,nombre,apellido,cedula,celular,correo,Direccion,TelfTra,EstadoCivil,Cargo)){
                 JOptionPane.showMessageDialog(null, "Registro Exitoso");
             }else{
                 JOptionPane.showMessageDialog(null, "El Usuario ya se encuentra registrado");
@@ -276,19 +277,5 @@ public class vista_registrar_empleado extends javax.swing.JFrame {
     private javax.swing.JPasswordField psContrasena;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
-
-    public boolean RegistrarEmpleado(String user, String password,String nombre,String apellido,String cedula,String Celular, String correo, String Direccion, String TelfTra, String EstadoCivil, String Cargo){
-        Conexion conexion = Conexion.getInstancia();
-        try{
-            String SQL1 = "SELECT * FROM Empleados WHERE IdEmpleado = '"+user+"'";
-            String SQL2 = "INSERT Empleados(IdEmpleado,Contraseña,Nombre,Apellido,Cedula,Celular,Correo,Direccion,telTrabajo,EstadoCivil,Cargo) VALUES ('"+user+"','"+password+"','"+nombre+"','"+apellido+"','"+cedula+"','"+Celular+"','"+correo+"','"+Direccion+"','"+TelfTra+"','"+EstadoCivil+"','"+Cargo+"')";
-            if(conexion.Actualizar(SQL1, SQL2)){
-                return true;
-            }else{return false;}
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
 
 }

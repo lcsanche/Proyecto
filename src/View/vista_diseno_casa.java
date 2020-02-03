@@ -233,12 +233,15 @@ public class vista_diseno_casa extends javax.swing.JFrame {
             vista_principal dc = new vista_principal();
             dc.setVisible(true);
             dispose();
+        }else if (user.getUser()=="Null"){
+            vista_registrarse vr=new vista_registrarse();
+            vr.setVisible(true);
+            dispose();
         }else{
             vista_vendedor v= new vista_vendedor();
             v.setVisible(true);
             dispose();
-        }
-        
+        }   
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     public static void main(String args[]) {

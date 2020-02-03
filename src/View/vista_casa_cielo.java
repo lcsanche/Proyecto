@@ -5,11 +5,8 @@
  */
 package View;
 
+import Model.Clients;
 import Model.Users;
-import Singleton.Conexion;
-import View.vista_diseno_casa;
-import javax.swing.JComboBox;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -232,7 +229,8 @@ public class vista_casa_cielo extends javax.swing.JFrame {
         String TBaño = (String) cbBanio.getSelectedItem();
         String Ttecho = (String) cbTecho.getSelectedItem();
         Users user = new Users();
-        user.GuardarCasaDiseñada(user.getUser(),"Cielo","150","2","No","Norte","Grande","4","3",Tporce,TGrife,Tluz,TBaño,Ttecho);             
+        Clients Cliente = new Clients();
+        Cliente.GuardarCasaDiseñada(user.getUser(),"Cielo","150","2","No","Norte","Grande","4","3",Tporce,TGrife,Tluz,TBaño,Ttecho);             
     }//GEN-LAST:event_bGuardarActionPerformed
      
     

@@ -5,6 +5,9 @@
  */
 package View;
 
+import Model.Admin;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author PC-4
@@ -41,14 +44,17 @@ public class vista_admEmpleado extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(300, 100));
-        setMaximumSize(new java.awt.Dimension(900, 600));
         setMinimumSize(new java.awt.Dimension(900, 600));
-        setPreferredSize(new java.awt.Dimension(900, 600));
         getContentPane().setLayout(null);
         getContentPane().add(txtNombre);
         txtNombre.setBounds(170, 30, 310, 30);
 
         btnBuscar.setText("Buscar");
+        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnBuscar);
         btnBuscar.setBounds(510, 60, 80, 30);
 
@@ -58,7 +64,7 @@ public class vista_admEmpleado extends javax.swing.JFrame {
         jLabel1.setBounds(40, 30, 80, 30);
 
         jLabel2.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
-        jLabel2.setText("C.I/ Pasaporte:");
+        jLabel2.setText("Apellidos");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(40, 80, 140, 30);
         getContentPane().add(txtID);
@@ -116,6 +122,17 @@ public class vista_admEmpleado extends javax.swing.JFrame {
         a.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
+
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+        String Nombre = txtNombre.getText();
+        String Cedula = txtID.getText();
+        Admin Admin = new Admin();
+        if (Nombre.length() > 0){
+            Admin.RevisarDatosEmpleado(TbEmpleados,Nombre,Cedula);
+        }else{
+            JOptionPane.showMessageDialog(null, "Los Campos son Obligatorios");
+        }
+    }//GEN-LAST:event_btnBuscarActionPerformed
 
     /**
      * @param args the command line arguments

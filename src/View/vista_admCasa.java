@@ -5,11 +5,8 @@
  */
 package View;
 
-import Singleton.Conexion;
-import java.sql.ResultSet;
-import java.util.Arrays;
+import Model.Admin;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -119,12 +116,9 @@ public class vista_admCasa extends javax.swing.JFrame {
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         String Nombre = txtNombre.getText();
+        Admin Admin = new Admin();
         if (Nombre.length() > 0){
-            if(BuscarCasasPre(Nombre)){
-                JOptionPane.showMessageDialog(null, "Busqueda Exitosa");                
-            }else{
-                JOptionPane.showMessageDialog(null, "El Usuario ya se encuentra registrado");
-            }
+            Admin.BuscarCasasPre(TbEmpleados, Nombre);
         }else{
             JOptionPane.showMessageDialog(null, "Los Campos son Obligatorios");
         }   
@@ -179,35 +173,4 @@ public class vista_admCasa extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
-
-    public boolean BuscarCasasPre(String Nombre){
-        Conexion conexion = Conexion.getInstancia();
-        DefaultTableModel modelo = (DefaultTableModel) TbEmpleados.getModel(); 
-        String [] fila = new String[8];
-        try{
-            ResultSet rs = conexion.consultar("SELECT * FROM CasasPre WHERE Nombre = '" + Nombre + "'" );
-            rs.last();
-            if (rs.getRow() > 0){
-                fila[0]=rs.getString("Nombre"); 
-                fila[1]=rs.getString("Metros2"); 
-                fila[2]=rs.getString("nPisos"); 
-                fila[3]=rs.getString("Esquinera"); 
-                fila[4]=rs.getString("Orientacion");
-                fila[5]=rs.getString("TPatio"); 
-                fila[6]=rs.getString("nHabitaciones"); 
-                fila[7]=rs.getString("nBaños");
-                modelo.addRow(fila);
-                TbEmpleados.setModel(modelo);
-                return true;
-            }
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
-
-
-
-
-
 }

@@ -5,7 +5,7 @@
  */
 package View;
 
-import Singleton.Conexion;
+import Model.Admin;
 import javax.swing.JOptionPane;
 
 /**
@@ -166,8 +166,9 @@ public class vista_crearCasaPredisenada extends javax.swing.JFrame {
         String TPatio = txtPatio.getText();
         String nHabitaciones = txtNHabitaciones.getText();
         String nBaños = txtNbanios.getText();
+         Admin Admin = new Admin();
         if (Nombre.length() > 0 && Metros2.length() > 0 && nPisos.length() > 0 && Esquinera.length() > 0 && Orientacion.length() > 0 && TPatio.length() > 0 && nHabitaciones.length() > 0 && nBaños.length() > 0 ){
-            if(AgregarCasaPre(Nombre,Metros2,nPisos,Esquinera,Orientacion,TPatio,nHabitaciones,nBaños)){
+            if(Admin.AgregarCasaPre(Nombre,Metros2,nPisos,Esquinera,Orientacion,TPatio,nHabitaciones,nBaños)){
                 JOptionPane.showMessageDialog(null, "Registro Exitoso");
             }else{
                 JOptionPane.showMessageDialog(null, "La Casa ya se encuentra registrada");
@@ -235,21 +236,4 @@ public class vista_crearCasaPredisenada extends javax.swing.JFrame {
     private javax.swing.JTextField txtOrientacion;
     private javax.swing.JTextField txtPatio;
     // End of variables declaration//GEN-END:variables
-
-    public boolean AgregarCasaPre(String Nombre, String Metros2, String nPisos, String Esquinera, String Orientacion, String TPatio, String nHabitaciones, String nBaños){
-        Conexion conexion = Conexion.getInstancia();
-        try{
-            String SQL1 = "SELECT * FROM CasasPre WHERE Nombre = '"+Nombre+"'";
-            String SQL2 = "INSERT CasasPre(Nombre,Metros2,nPisos,Esquinera,Orientacion,TPatio,nHabitaciones,nBaños) VALUES ('"+Nombre+"','"+Metros2+"','"+nPisos+"','"+Esquinera+"','"+Orientacion+"','"+TPatio+"','"+nHabitaciones+"','"+nBaños+"')";
-            if(conexion.Actualizar(SQL1, SQL2)){
-                return true;
-            }else{return false;}
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
-        return false;
-        
-        
-    }
-
 }

@@ -6,10 +6,8 @@
 package View;
 
 
-import Singleton.Conexion;
-import java.sql.ResultSet;
+import Model.Vendedor;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -52,7 +50,7 @@ public class vista_ver_cliente extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
-        jLabel1.setText("C.I/Pasaporte:");
+        jLabel1.setText("Apellidos");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(80, 90, 120, 50);
 
@@ -131,12 +129,10 @@ public class vista_ver_cliente extends javax.swing.JFrame {
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         String Nombre = txtNombre.getText();
+        String Cedula = txtID.getText();
+        Vendedor Vendedor = new Vendedor();
         if (Nombre.length() > 0){
-            if(RevisarDatosCliente(Nombre)){
-                JOptionPane.showMessageDialog(null, "Busqueda Exitosa");                
-            }else{
-                JOptionPane.showMessageDialog(null, "No se encontro al Cliente");
-            }
+            Vendedor.RevisarDatosCliente(tbClientes,Nombre,Cedula);
         }else{
             JOptionPane.showMessageDialog(null, "Los Campos son Obligatorios");
         }
@@ -199,33 +195,6 @@ public class vista_ver_cliente extends javax.swing.JFrame {
     private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
     
-    public boolean RevisarDatosCliente(String Nombre){
-        Conexion conexion = Conexion.getInstancia();
-        DefaultTableModel modelo = (DefaultTableModel) tbClientes.getModel();
-        Object [] fila = new Object[11];
-        try{
-            ResultSet rs = conexion.consultar("SELECT * FROM Cliente WHERE Nombre = '" + Nombre + "'" );
-            rs.last();
-            if (rs.getRow() > 0){
-                fila[0]=rs.getString("Apellido"); 
-                fila[1]=rs.getString("Cedula"); 
-                fila[2]=rs.getString("Celular"); 
-                fila[3]=rs.getString("Correo");
-                fila[4]=rs.getString("Direccion"); 
-                fila[5]=rs.getString("Empresa"); 
-                fila[6]=rs.getString("Cargo");
-                fila[7]=rs.getString("DirTra");
-                fila[8]=rs.getString("TelfTra");
-                fila[9]=rs.getString("EstadoCivil");
-                fila[10]=rs.getString("NumHijos");
-                modelo.addRow(fila);
-                tbClientes.setModel(modelo);
-                return true;
-            }
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
+    
 
 }
