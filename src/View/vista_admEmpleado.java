@@ -125,10 +125,10 @@ public class vista_admEmpleado extends javax.swing.JFrame {
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         String Nombre = txtNombre.getText();
-        String Cedula = txtID.getText();
+        String Apellido = txtID.getText();
         Admin Admin = new Admin();
-        if (Nombre.length() > 0){
-            Admin.RevisarDatosEmpleado(TbEmpleados,Nombre,Cedula);
+        if (Nombre.length() > 0 && Apellido.length() > 0){
+            Admin.RevisarDatosEmpleado(TbEmpleados,Nombre,Apellido);
         }else{
             JOptionPane.showMessageDialog(null, "Los Campos son Obligatorios");
         }

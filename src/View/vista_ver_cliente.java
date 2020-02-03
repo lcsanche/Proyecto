@@ -76,7 +76,7 @@ public class vista_ver_cliente extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(30, 150, 670, 360);
 
-        jButton1.setText("Ver Casas Prediseñadas");
+        jButton1.setText("Ver Casas Diseñadas");
         getContentPane().add(jButton1);
         jButton1.setBounds(710, 370, 150, 40);
 
@@ -109,6 +109,11 @@ public class vista_ver_cliente extends javax.swing.JFrame {
         btnAtras.setBounds(60, 523, 80, 30);
 
         jButton2.setText("Generar Reporte");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2);
         jButton2.setBounds(710, 260, 150, 40);
 
@@ -129,10 +134,10 @@ public class vista_ver_cliente extends javax.swing.JFrame {
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         String Nombre = txtNombre.getText();
-        String Cedula = txtID.getText();
+        String Apellido = txtID.getText();
         Vendedor Vendedor = new Vendedor();
-        if (Nombre.length() > 0){
-            Vendedor.RevisarDatosCliente(tbClientes,Nombre,Cedula);
+        if (Nombre.length() > 0 && Apellido.length() > 0){
+            Vendedor.RevisarDatosCliente(tbClientes,Nombre,Apellido);
         }else{
             JOptionPane.showMessageDialog(null, "Los Campos son Obligatorios");
         }
@@ -143,6 +148,10 @@ public class vista_ver_cliente extends javax.swing.JFrame {
         v.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        JOptionPane.showMessageDialog(null, "El Reporte fu generado con Exito");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -219,7 +219,13 @@ public class vista_casa_paraiso extends javax.swing.JFrame {
         String Ttecho = (String) cbTecho.getSelectedItem();
         Users user = new Users();
         Clients Cliente = new Clients();
-        Cliente.GuardarCasaDiseñada(user.getUser(),"Paraiso","110","2","Si","Norte","Grande","3","2",Tporce,TGrife,Tluz,TBaño,Ttecho); 
+        if (user.getUser()=="Null"){
+            vista_registrarse vr=new vista_registrarse();
+            vr.setVisible(true);
+            dispose();
+        }else{
+            Cliente.GuardarCasaDiseñada(user.getUser(),"Cielo","150","2","No","Norte","Grande","4","3",Tporce,TGrife,Tluz,TBaño,Ttecho);
+        }
     }//GEN-LAST:event_bGuardarActionPerformed
      
     

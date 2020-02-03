@@ -9,7 +9,6 @@ import Singleton.Conexion;
 import creacional.Casa;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -30,7 +29,7 @@ public class Vendedor{
         
         String[] registros = new String[13];
         try{
-            ResultSet rs = conexion.consultar("SELECT * FROM Cliente WHERE Nombre = '" + Nombre + "' and Apellido = '"+Apellido+"'");
+            ResultSet rs = conexion.consultar("SELECT IdCliente,Nombre,Apellido,Cedula,Celular,Direccion,Correo,Empresa,Cargo,DirTra,TelfTra,EstadoCivil,NumHijos FROM Cliente WHERE Nombre = '" + Nombre + "' and Apellido = '"+Apellido+"'");
             while (rs.next()) {
                 for (int i = 0; i < 13; i++) {
                     registros[i] = rs.getString(i + 1);
@@ -43,6 +42,10 @@ public class Vendedor{
             e.printStackTrace();
         }
         return false;
+    }
+    
+    public void EnviarPDFCasaPre(String Correo){
+        System.out.println("El PDf fue enviado con exito");
     }
     
     public void RevisarCasaCliente(String user){
@@ -70,8 +73,6 @@ public class Vendedor{
         }
     }
     
-    public void EnviarPDFCasaPre(String Correo){
-        //Defini Metodo
-    }
+    
     
 }

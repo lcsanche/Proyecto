@@ -56,7 +56,7 @@ public class Admin {
         
         String[] registros = new String[10];
         try{
-            ResultSet rs = conexion.consultar("SELECT * FROM Cliente WHERE Nombre = '" + Nombre + "' and Apellido = '"+Apellido+"'");
+            ResultSet rs = conexion.consultar("SELECT IdEmpleado,Nombre,Apellido,Cedula,Celular,Correo,Direccion,telTrabajo,EstadoCivil,Cargo FROM Empleados WHERE Nombre = '" + Nombre + "' and Apellido = '"+Apellido+"'");
             while (rs.next()) {
                 for (int i = 0; i < 10; i++) {
                     registros[i] = rs.getString(i + 1);
